@@ -4,14 +4,14 @@
         <title>Singularity Blog</title>
         <link>https://singularity.hpcng.org/news</link>
         <description>Singularity Blog</description>
-        <lastBuildDate>Wed, 05 May 2021 15:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 06 May 2021 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <item>
             <title><![CDATA[3.8]]></title>
             <link>https://singularity.hpcng.org/news/3.8</link>
             <guid>3.8</guid>
-            <pubDate>Wed, 05 May 2021 15:00:00 GMT</pubDate>
+            <pubDate>Thu, 06 May 2021 00:00:00 GMT</pubDate>
             <description><![CDATA[This is a placeholder for the announcement that will come with the release of Singularity 3.8]]></description>
         </item>
     </channel>
