@@ -1,0 +1,1 @@
+(self.webpackChunksingularity_web=self.webpackChunksingularity_web||[]).push([[256],{5256:function(e,s,u){"use strict";u.r(s)}}]);
