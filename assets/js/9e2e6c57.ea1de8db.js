@@ -1,1 +1,0 @@
-(self.webpackChunksingularity_web=self.webpackChunksingularity_web||[]).push([[665],{6308:function(e){"use strict";e.exports=JSON.parse('{"allTagsPath":"/news/tags","slug":"changelog","name":"changelog","count":1,"permalink":"/news/tags/changelog"}')}}]);

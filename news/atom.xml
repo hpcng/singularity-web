@@ -2,16 +2,16 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://singularity.hpcng.org/news</id>
     <title>Singularity Blog</title>
-    <updated>2021-05-06T00:00:00.000Z</updated>
+    <updated>2021-05-07T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://singularity.hpcng.org/news"/>
     <subtitle>Singularity Blog</subtitle>
     <icon>https://singularity.hpcng.org/img/favicon.png</icon>
     <entry>
-        <title type="html"><![CDATA[3.8]]></title>
-        <id>3.8</id>
-        <link href="https://singularity.hpcng.org/news/3.8"/>
-        <updated>2021-05-06T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[This is a placeholder for the announcement that will come with the release of Singularity 3.8]]></summary>
+        <title type="html"><![CDATA[Full Steam Ahead!]]></title>
+        <id>full-steam-ahead</id>
+        <link href="https://singularity.hpcng.org/news/full-steam-ahead"/>
+        <updated>2021-05-07T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Dear Singularity Community,]]></summary>
     </entry>
 </feed>
