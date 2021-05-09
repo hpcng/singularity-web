@@ -1,1 +1,0 @@
-(self.webpackChunksingularity_web=self.webpackChunksingularity_web||[]).push([[578],{2695:function(e){"use strict";e.exports=JSON.parse('{"pluginId":"docs-admin","version":"current","label":"Next","isLast":true,"docsSidebars":{"someSidebar":[{"type":"link","label":"Admin Quick Start","href":"/docs-admin/"}]},"permalinkToSidebar":{"/docs-admin/":"someSidebar"}}')}}]);
