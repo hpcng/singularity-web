@@ -1,1 +1,0 @@
-(self.webpackChunksingularity_web=self.webpackChunksingularity_web||[]).push([[53],{9054:function(e){"use strict";e.exports=JSON.parse('{"pluginId":"default","version":"current","label":"Next","isLast":true,"docsSidebars":{"someSidebar":[{"type":"link","label":"Singularity User Documentation","href":"/docs-user/"}]},"permalinkToSidebar":{"/docs-user/":"someSidebar"}}')}}]);
