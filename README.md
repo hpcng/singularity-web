@@ -6,10 +6,12 @@
 
 1.  **Start developing.**
 
-    Navigate into the site’s directory and start it up.
+    Navigate into the site’s directory, install dependencies and the Gatsby CLI and start up the development server.
 
     ```shell
     cd singularity/
+    npm i
+    npm i -g gatsby-cli
     gatsby develop
     ```
 
