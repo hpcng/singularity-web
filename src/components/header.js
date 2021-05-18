@@ -16,9 +16,9 @@ const Header = ({ siteTitle }) => {
             to="/"
             aria-label="Singularity"
             title="Singularity"
-            className="inline-flex items-center mr-8"
+            className="inline-flex items-center mr-10"
           >
-            <img src={logo} className="w-8" />
+            <img src={logo} className="w-10" />
             <span className="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
               Singularity
             </span>
