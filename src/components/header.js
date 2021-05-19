@@ -26,22 +26,12 @@ const Header = ({ siteTitle }) => {
           <ul className="flex items-center hidden space-x-8 lg:flex">
             <li>
               <Link
-                to="/"
-                aria-label="User Documentation"
-                title="User Documentation"
+                to="/docs"
+                aria-label="Documentation"
+                title="Documentation"
                 className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-blue-900"
               >
-                User Documentation
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/"
-                aria-label="Administrator Documentation"
-                title="Administrator Documentation"
-                className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-blue-900"
-              >
-                Administrator Documentation
+                Documentation
               </Link>
             </li>
             <li>
@@ -54,12 +44,22 @@ const Header = ({ siteTitle }) => {
                 News
               </Link>
             </li>
+            <li>
+              <Link
+                to="/help"
+                aria-label="Help"
+                title="Help"
+                className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-blue-900"
+              >
+                Help
+              </Link>
+            </li>
           </ul>
         </div>
         <ul className="flex items-center hidden space-x-8 lg:flex">
           <li>
             <Link
-              to="/"
+              to="https://github.com/hpcng/singularity"
               aria-label="GitHub"
               title="GitHub"
               className="text-gray-700 hover:text-blue-900 transition-colors duration-200" 
@@ -69,7 +69,7 @@ const Header = ({ siteTitle }) => {
           </li>
           <li>
             <a
-              href="/"
+              href="/docs"
               class="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-blue-900 hover:bg-blue-800 focus:shadow-outline focus:outline-none"
               aria-label="Get Started"
               title="Get Started"
