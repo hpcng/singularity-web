@@ -1,1 +1,0 @@
-(self.webpackChunksingularity_web=self.webpackChunksingularity_web||[]).push([[659],{1393:function(e){"use strict";e.exports=JSON.parse('{"permalink":"/news","page":1,"postsPerPage":10,"totalPages":1,"totalCount":1,"previousPage":null,"nextPage":null,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);
