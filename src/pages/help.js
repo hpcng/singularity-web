@@ -28,7 +28,7 @@ const HelpPage = () => (
             </p>
           </div>
           <Link
-            to="https://singularity.hpcng.org/docs-user"
+            to="/user-docs/3.7/"
             aria-label="Documentation"
             className="inline-flex items-center font-semibold transition-colors duration-200 text-blue-900 hover:text-blue-700"
           >

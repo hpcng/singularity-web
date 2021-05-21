@@ -26,7 +26,7 @@ const Header = ({ siteTitle }) => {
           <ul className="flex items-center hidden space-x-8 lg:flex">
             <li>
               <Link
-                to="/docs"
+                to="/user-docs/3.7/"
                 aria-label="Documentation"
                 title="Documentation"
                 className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-blue-900"
