@@ -88,14 +88,14 @@ const Header = ({ siteTitle }) => {
             </Link>
           </li>
           <li>
-            <a
-              href="/docs"
+            <Link
+              to="/user-docs/3.7/quick_start.html"
               class="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-blue-900 hover:bg-blue-800 focus:shadow-outline focus:outline-none"
               aria-label="Get Started"
               title="Get Started"
             >
               Get Started
-            </a>
+            </Link>
           </li>
         </ul>
       </div>

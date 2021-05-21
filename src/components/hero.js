@@ -15,12 +15,13 @@ const Hero = () => {
               </p>
             </div>
             <div className="flex items-center sm:justify-center">
-              <button
-                type="submit"
-                className="inline-flex items-center justify-center h-12 px-6 mr-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-blue-900 hover:bg-blue-800 focus:shadow-outline focus:outline-none"
-              >
-                Get Started
-              </button>
+              <Link to="/user-docs/3.7/quick_start.html">
+                <button
+                  className="inline-flex items-center justify-center h-12 px-6 mr-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-blue-900 hover:bg-blue-800 focus:shadow-outline focus:outline-none"
+                >
+                  Get Started
+                </button>
+              </Link>
               <Link
                 to="/help"
                 aria-label=""
