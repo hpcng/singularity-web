@@ -61,7 +61,7 @@ Options
       --docker-login     login to a Docker Repository interactively
   -F, --force            overwrite an image file if it exists
   -h, --help             help for pull
-      --library string   download images from the provided library (default "https://library.sylabs.io")
+      --library string   download images from the provided library
       --no-cleanup       do NOT clean up bundle after failed build, can be helpful for debugging
       --nohttps          do NOT use HTTPS with the docker:// transport (useful for local docker registries without a certificate)
 

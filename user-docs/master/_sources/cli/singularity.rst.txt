@@ -57,6 +57,7 @@ SEE ALSO
 * :ref:`singularity instance <singularity_instance>` 	 - Manage containers running as services
 * :ref:`singularity key <singularity_key>` 	 - Manage OpenPGP keys
 * :ref:`singularity oci <singularity_oci>` 	 - Manage OCI containers
+* :ref:`singularity overlay <singularity_overlay>` 	 - Manage an EXT3 writable overlay image
 * :ref:`singularity plugin <singularity_plugin>` 	 - Manage Singularity plugins
 * :ref:`singularity pull <singularity_pull>` 	 - Pull an image from a URI
 * :ref:`singularity push <singularity_push>` 	 - Upload image to the provided URI

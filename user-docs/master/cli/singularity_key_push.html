@@ -187,6 +187,8 @@
 <li class="toctree-l2"><a class="reference internal" href="singularity_oci_state.html">singularity oci state</a></li>
 <li class="toctree-l2"><a class="reference internal" href="singularity_oci_umount.html">singularity oci umount</a></li>
 <li class="toctree-l2"><a class="reference internal" href="singularity_oci_update.html">singularity oci update</a></li>
+<li class="toctree-l2"><a class="reference internal" href="singularity_overlay.html">singularity overlay</a></li>
+<li class="toctree-l2"><a class="reference internal" href="singularity_overlay_create.html">singularity overlay create</a></li>
 <li class="toctree-l2"><a class="reference internal" href="singularity_plugin.html">singularity plugin</a></li>
 <li class="toctree-l2"><a class="reference internal" href="singularity_plugin_compile.html">singularity plugin compile</a></li>
 <li class="toctree-l2"><a class="reference internal" href="singularity_plugin_create.html">singularity plugin create</a></li>
@@ -322,7 +324,7 @@ keys from the local or the global keyring.</p>
 <h2>Options<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span><span class="n">g</span><span class="p">,</span> <span class="o">--</span><span class="k">global</span>       <span class="n">manage</span> <span class="k">global</span> <span class="n">public</span> <span class="n">keys</span> <span class="p">(</span><span class="n">import</span><span class="o">/</span><span class="n">pull</span><span class="o">/</span><span class="n">remove</span> <span class="n">are</span> <span class="n">restricted</span> <span class="n">to</span> <span class="n">root</span> <span class="n">user</span> <span class="ow">or</span> <span class="n">unprivileged</span> <span class="n">installation</span> <span class="n">only</span><span class="p">)</span>
 <span class="o">-</span><span class="n">h</span><span class="p">,</span> <span class="o">--</span><span class="n">help</span>         <span class="n">help</span> <span class="k">for</span> <span class="n">push</span>
-<span class="o">-</span><span class="n">u</span><span class="p">,</span> <span class="o">--</span><span class="n">url</span> <span class="n">string</span>   <span class="n">specify</span> <span class="n">the</span> <span class="n">key</span> <span class="n">server</span> <span class="n">URL</span> <span class="p">(</span><span class="n">default</span> <span class="s2">&quot;https://keys.sylabs.io&quot;</span><span class="p">)</span>
+<span class="o">-</span><span class="n">u</span><span class="p">,</span> <span class="o">--</span><span class="n">url</span> <span class="n">string</span>   <span class="n">specify</span> <span class="n">the</span> <span class="n">key</span> <span class="n">server</span> <span class="n">URL</span>
 </pre></div>
 </div>
 </div>
@@ -349,7 +351,7 @@ keys from the local or the global keyring.</p>
 
   <div role="contentinfo">
     <p>
-        &#169; Copyright 2017-2020, Sylabs Inc.
+        &#169; Copyright 2017-2021, HPCng.
 
     </p>
   </div>

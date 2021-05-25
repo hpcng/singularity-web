@@ -181,6 +181,8 @@
 <li class="toctree-l2"><a class="reference internal" href="singularity_oci_state.html">singularity oci state</a></li>
 <li class="toctree-l2"><a class="reference internal" href="singularity_oci_umount.html">singularity oci umount</a></li>
 <li class="toctree-l2"><a class="reference internal" href="singularity_oci_update.html">singularity oci update</a></li>
+<li class="toctree-l2"><a class="reference internal" href="singularity_overlay.html">singularity overlay</a></li>
+<li class="toctree-l2"><a class="reference internal" href="singularity_overlay_create.html">singularity overlay create</a></li>
 <li class="toctree-l2"><a class="reference internal" href="singularity_plugin.html">singularity plugin</a></li>
 <li class="toctree-l2"><a class="reference internal" href="singularity_plugin_compile.html">singularity plugin compile</a></li>
 <li class="toctree-l2"><a class="reference internal" href="singularity_plugin_create.html">singularity plugin create</a></li>
@@ -348,7 +350,7 @@ $ singularity pull image.sif oras://&lt;username&gt;.azurecr.io/namespace/image:
     <span class="o">--</span><span class="n">docker</span><span class="o">-</span><span class="n">login</span>     <span class="n">login</span> <span class="n">to</span> <span class="n">a</span> <span class="n">Docker</span> <span class="n">Repository</span> <span class="n">interactively</span>
 <span class="o">-</span><span class="n">F</span><span class="p">,</span> <span class="o">--</span><span class="n">force</span>            <span class="n">overwrite</span> <span class="n">an</span> <span class="n">image</span> <span class="n">file</span> <span class="k">if</span> <span class="n">it</span> <span class="n">exists</span>
 <span class="o">-</span><span class="n">h</span><span class="p">,</span> <span class="o">--</span><span class="n">help</span>             <span class="n">help</span> <span class="k">for</span> <span class="n">pull</span>
-    <span class="o">--</span><span class="n">library</span> <span class="n">string</span>   <span class="n">download</span> <span class="n">images</span> <span class="kn">from</span> <span class="nn">the</span> <span class="n">provided</span> <span class="n">library</span> <span class="p">(</span><span class="n">default</span> <span class="s2">&quot;https://library.sylabs.io&quot;</span><span class="p">)</span>
+    <span class="o">--</span><span class="n">library</span> <span class="n">string</span>   <span class="n">download</span> <span class="n">images</span> <span class="kn">from</span> <span class="nn">the</span> <span class="n">provided</span> <span class="n">library</span>
     <span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">cleanup</span>       <span class="n">do</span> <span class="n">NOT</span> <span class="n">clean</span> <span class="n">up</span> <span class="n">bundle</span> <span class="n">after</span> <span class="n">failed</span> <span class="n">build</span><span class="p">,</span> <span class="n">can</span> <span class="n">be</span> <span class="n">helpful</span> <span class="k">for</span> <span class="n">debugging</span>
     <span class="o">--</span><span class="n">nohttps</span>          <span class="n">do</span> <span class="n">NOT</span> <span class="n">use</span> <span class="n">HTTPS</span> <span class="k">with</span> <span class="n">the</span> <span class="n">docker</span><span class="p">:</span><span class="o">//</span> <span class="n">transport</span> <span class="p">(</span><span class="n">useful</span> <span class="k">for</span> <span class="n">local</span> <span class="n">docker</span> <span class="n">registries</span> <span class="n">without</span> <span class="n">a</span> <span class="n">certificate</span><span class="p">)</span>
 </pre></div>
@@ -379,7 +381,7 @@ Enterprise Performance Computing (EPC)</p>
 
   <div role="contentinfo">
     <p>
-        &#169; Copyright 2017-2020, Sylabs Inc.
+        &#169; Copyright 2017-2021, HPCng.
 
     </p>
   </div>

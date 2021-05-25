@@ -32,7 +32,7 @@ Options
 
   -g, --global       manage global public keys (import/pull/remove are restricted to root user or unprivileged installation only)
   -h, --help         help for push
-  -u, --url string   specify the key server URL (default "https://keys.sylabs.io")
+  -u, --url string   specify the key server URL
 
 SEE ALSO
 ~~~~~~~~

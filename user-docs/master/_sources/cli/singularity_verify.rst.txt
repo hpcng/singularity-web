@@ -41,7 +41,7 @@ Options
       --legacy-insecure   enable verification of (insecure) legacy signatures
   -l, --local             only verify with local key(s) in keyring
   -i, --sif-id uint32     verify object with the specified ID
-  -u, --url string        specify a URL for a key server (default "https://keys.sylabs.io")
+  -u, --url string        specify a URL for a key server
 
 SEE ALSO
 ~~~~~~~~
