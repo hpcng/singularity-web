@@ -48,7 +48,7 @@ Options
   -U, --allow-unsigned       do not require a signed container image
   -D, --description string   description for container image (library:// only)
   -h, --help                 help for push
-      --library string       the library to push to (default "https://library.sylabs.io")
+      --library string       the library to push to
 
 SEE ALSO
 ~~~~~~~~

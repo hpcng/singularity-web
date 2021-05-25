@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>singularity instance start &mdash; Singularity User Guide 3.7 documentation</title>
+  <title>singularity overlay &mdash; Singularity User Guide 3.7 documentation</title>
   
 
   
@@ -45,8 +45,8 @@
     
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="singularity instance stop" href="singularity_instance_stop.html" />
-    <link rel="prev" title="singularity instance list" href="singularity_instance_list.html" /> 
+    <link rel="next" title="singularity overlay create" href="singularity_overlay_create.html" />
+    <link rel="prev" title="singularity oci update" href="singularity_oci_update.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -156,13 +156,7 @@
 <li class="toctree-l2"><a class="reference internal" href="singularity_inspect.html">singularity inspect</a></li>
 <li class="toctree-l2"><a class="reference internal" href="singularity_instance.html">singularity instance</a></li>
 <li class="toctree-l2"><a class="reference internal" href="singularity_instance_list.html">singularity instance list</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">singularity instance start</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#synopsis">Synopsis</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#examples">Examples</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#options">Options</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#see-also">SEE ALSO</a></li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="singularity_instance_start.html">singularity instance start</a></li>
 <li class="toctree-l2"><a class="reference internal" href="singularity_instance_stop.html">singularity instance stop</a></li>
 <li class="toctree-l2"><a class="reference internal" href="singularity_key.html">singularity key</a></li>
 <li class="toctree-l2"><a class="reference internal" href="singularity_key_export.html">singularity key export</a></li>
@@ -187,7 +181,13 @@
 <li class="toctree-l2"><a class="reference internal" href="singularity_oci_state.html">singularity oci state</a></li>
 <li class="toctree-l2"><a class="reference internal" href="singularity_oci_umount.html">singularity oci umount</a></li>
 <li class="toctree-l2"><a class="reference internal" href="singularity_oci_update.html">singularity oci update</a></li>
-<li class="toctree-l2"><a class="reference internal" href="singularity_overlay.html">singularity overlay</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">singularity overlay</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#synopsis">Synopsis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#examples">Examples</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#options">Options</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#see-also">SEE ALSO</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="singularity_overlay_create.html">singularity overlay create</a></li>
 <li class="toctree-l2"><a class="reference internal" href="singularity_plugin.html">singularity plugin</a></li>
 <li class="toctree-l2"><a class="reference internal" href="singularity_plugin_compile.html">singularity plugin compile</a></li>
@@ -280,14 +280,14 @@
         
           <li><a href="../cli.html">Command Line Interface</a> &raquo;</li>
         
-      <li>singularity instance start</li>
+      <li>singularity overlay</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
           
             
-              <a href="https://github.com/hpcng/singularity-userdocs/blob/master/cli/singularity_instance_start.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/hpcng/singularity-userdocs/blob/master/cli/singularity_overlay.rst" class="fa fa-github"> Edit on GitHub</a>
             
           
         
@@ -301,112 +301,41 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="singularity-instance-start">
-<span id="id1"></span><h1>singularity instance start<a class="headerlink" href="#singularity-instance-start" title="Permalink to this headline">¶</a></h1>
-<p>Start a named instance of the given container image</p>
+  <div class="section" id="singularity-overlay">
+<span id="id1"></span><h1>singularity overlay<a class="headerlink" href="#singularity-overlay" title="Permalink to this headline">¶</a></h1>
+<p>Manage an EXT3 writable overlay image</p>
 <div class="section" id="synopsis">
 <h2>Synopsis<a class="headerlink" href="#synopsis" title="Permalink to this headline">¶</a></h2>
 <blockquote>
-<div><p>The instance start command allows you to create a new named instance from an
-existing container image that will begin running in the background. If a
-startscript is defined in the container metadata the commands in that script
-will be executed with the instance start command as well. You can optionally
-pass arguments to startscript</p>
-<p>singularity instance start accepts the following container formats</p>
-<p><a href="#id2"><span class="problematic" id="id3">*</span></a>.sif               Singularity Image Format (SIF). Native to Singularity 3.0+</p>
-<p><a href="#id4"><span class="problematic" id="id5">*</span></a>.sqsh              SquashFS format.  Native to Singularity 2.4+</p>
-<p><a href="#id6"><span class="problematic" id="id7">*</span></a>.img               ext3 format. Native to Singularity versions &lt; 2.4.</p>
-<dl class="simple">
-<dt>directory/          sandbox format. Directory containing a valid root file</dt><dd><p>system and optionally Singularity meta-data.</p>
-</dd>
-<dt>instance://*        A local running instance of a container. (See the instance</dt><dd><p>command group.)</p>
-</dd>
-<dt>library://*         A SIF container hosted on a Library</dt><dd><p>(default <a class="reference external" href="https://cloud.sylabs.io/library">https://cloud.sylabs.io/library</a>)</p>
-</dd>
-<dt>docker://*          A Docker/OCI container hosted on Docker Hub or another</dt><dd><p>OCI registry.</p>
-</dd>
-</dl>
-<p>shub://*            A container hosted on Singularity Hub.</p>
-<dl class="simple">
-<dt>oras://*            A SIF container hosted on an OCI registry that supports</dt><dd><p>the OCI Registry As Storage (ORAS) specification.</p>
-</dd>
-</dl>
+<div><p>The overlay command allows management of EXT3 writable overlay images.</p>
 </div></blockquote>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">singularity</span> <span class="n">instance</span> <span class="n">start</span> <span class="p">[</span><span class="n">start</span> <span class="n">options</span><span class="o">...</span><span class="p">]</span> <span class="o">&lt;</span><span class="n">container</span> <span class="n">path</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">instance</span> <span class="n">name</span><span class="o">&gt;</span> <span class="p">[</span><span class="n">startscript</span> <span class="n">args</span><span class="o">...</span><span class="p">]</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">singularity</span> <span class="n">overlay</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="examples">
 <h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ singularity instance start /tmp/my-sql.sif mysql
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>All overlay commands have their own help output:
 
-$ singularity shell instance://mysql
-Singularity my-sql.sif&gt; pwd
-/home/mibauer/mysql
-Singularity my-sql.sif&gt; ps
-PID TTY          TIME CMD
-  1 pts/0    00:00:00 sinit
-  2 pts/0    00:00:00 bash
-  3 pts/0    00:00:00 ps
-Singularity my-sql.sif&gt;
-
-$ singularity instance stop /tmp/my-sql.sif mysql
-Stopping /tmp/my-sql.sif mysql
+$ singularity help overlay create
+$ singularity overlay create --help
 </pre></div>
 </div>
 </div>
 <div class="section" id="options">
 <h2>Options<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    --add-caps string        a comma separated capability list to add
-    --allow-setuid           allow setuid binaries in container (root only)
-    --apply-cgroups string   apply cgroups from file for container processes (root only)
--B, --bind strings           a user-bind path specification.  spec has the format src[:dest[:opts]], where src and dest are outside and inside paths.  If dest is not given, it is set equal to src.  Mount options (&#39;opts&#39;) may be specified as &#39;ro&#39; (read-only) or &#39;rw&#39; (read/write, which is the default). Multiple bind paths can be given by a comma separated list.
-    --boot                   execute /sbin/init to boot container (root only)
--e, --cleanenv               clean environment before running container
--c, --contain                use minimal /dev and empty other directories (e.g. /tmp and $HOME) instead of sharing filesystems from your host
--C, --containall             contain not only file systems, but also PID, IPC, and environment
-    --disable-cache          dont use cache, and dont create cache
-    --dns string             list of DNS server separated by commas to add in resolv.conf
-    --docker-login           login to a Docker Repository interactively
-    --drop-caps string       a comma separated capability list to drop
-    --env strings            pass environment variable to contained process
-    --env-file string        pass environment variables from file to contained process
--f, --fakeroot               run container in new user namespace as uid 0
-    --fusemount strings      A FUSE filesystem mount specification of the form &#39;&lt;type&gt;:&lt;fuse command&gt; &lt;mountpoint&gt;&#39; - where &lt;type&gt; is &#39;container&#39; or &#39;host&#39;, specifying where the mount will be performed (&#39;container-daemon&#39; or &#39;host-daemon&#39; will run the FUSE process detached). &lt;fuse command&gt; is the path to the FUSE executable, plus options for the mount. &lt;mountpoint&gt; is the location in the container to which the FUSE mount will be attached. E.g. &#39;container:sshfs 10.0.0.1:/ /sshfs&#39;. Implies --pid.
--h, --help                   help for start
--H, --home string            a home directory specification.  spec can either be a src path or src:dest pair.  src is the source path of the home directory outside the container and dest overrides the home directory within the container. (default &quot;/home/runner&quot;)
-    --hostname string        set container hostname
-    --keep-privs             let root user keep privileges in container (root only)
--n, --net                    run container in a new network namespace (sets up a bridge network interface by default)
-    --network string         specify desired network type separated by commas, each network will bring up a dedicated interface inside container (default &quot;bridge&quot;)
-    --network-args strings   specify network arguments to pass to CNI plugins
-    --no-home                do NOT mount users home directory if /home is not the current working directory
-    --no-init                do NOT start shim process with --pid
-    --no-mount strings       disable one or more mount xxx options set in singularity.conf
-    --no-privs               drop all privileges from root user in container)
-    --no-umask               do not propagate umask to the container, set default 0022 umask
-    --nohttps                do NOT use HTTPS with the docker:// transport (useful for local docker registries without a certificate)
-    --nv                     enable experimental Nvidia support
--o, --overlay strings        use an overlayFS image for persistent data storage or as read-only layer of container
-    --passphrase             prompt for an encryption passphrase
-    --pem-path string        enter an path to a PEM formated RSA key for an encrypted container
-    --pid-file string        write instance PID to the file with the given name
-    --rocm                   enable experimental Rocm support
--S, --scratch strings        include a scratch directory within the container that is linked to a temporary dir (use -W to force location)
-    --security strings       enable security features (SELinux, Apparmor, Seccomp)
--u, --userns                 run container in a new user namespace, allowing Singularity to run completely unprivileged on recent kernels. This disables some features of Singularity, for example it only works with sandbox images.
-    --uts                    run container in a new UTS namespace
--W, --workdir string         working directory to be used for /tmp, /var/tmp and $HOME (if -c/--contain was also used)
--w, --writable               by default all Singularity containers are available as read only. This option makes the file system accessible as read/write.
-    --writable-tmpfs         makes the file system accessible as read-write with non persistent data (with overlay support only)
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span><span class="n">h</span><span class="p">,</span> <span class="o">--</span><span class="n">help</span>   <span class="n">help</span> <span class="k">for</span> <span class="n">overlay</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="see-also">
 <h2>SEE ALSO<a class="headerlink" href="#see-also" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p><a class="reference internal" href="singularity_instance.html#singularity-instance"><span class="std std-ref">singularity instance</span></a>     - Manage containers running as services</p></li>
+<li><p><a class="reference internal" href="singularity.html#singularity"><span class="std std-ref">singularity</span></a>       -</p></li>
 </ul>
+<p>Linux container platform optimized for High Performance Computing (HPC) and
+Enterprise Performance Computing (EPC)
+* <a class="reference internal" href="singularity_overlay_create.html#singularity-overlay-create"><span class="std std-ref">singularity overlay create</span></a>         - Create EXT3 writable overlay image</p>
 <p><em>Auto generated by spf13/cobra on 25-May-2021</em></p>
 </div>
 </div>
@@ -417,8 +346,8 @@ Stopping /tmp/my-sql.sif mysql
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="singularity_instance_stop.html" class="btn btn-neutral float-right" title="singularity instance stop" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="singularity_instance_list.html" class="btn btn-neutral float-left" title="singularity instance list" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="singularity_overlay_create.html" class="btn btn-neutral float-right" title="singularity overlay create" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="singularity_oci_update.html" class="btn btn-neutral float-left" title="singularity oci update" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>

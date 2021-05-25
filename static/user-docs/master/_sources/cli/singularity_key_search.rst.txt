@@ -39,7 +39,7 @@ Options
 
   -h, --help         help for search
   -l, --long-list    output long list when searching for keys
-  -u, --url string   specify the key server URL (default "https://keys.sylabs.io")
+  -u, --url string   specify the key server URL
 
 SEE ALSO
 ~~~~~~~~

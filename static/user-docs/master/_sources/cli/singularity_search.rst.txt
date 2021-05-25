@@ -35,7 +35,7 @@ Options
 
       --arch string      architecture to search for (default "amd64")
   -h, --help             help for search
-      --library string   URI for library to search (default "https://library.sylabs.io")
+      --library string   URI for library to search
       --signed           architecture to search for
 
 SEE ALSO

@@ -32,7 +32,7 @@ Options
   -A, --arch string      specify requested image arch (default "amd64")
   -F, --force            delete image without confirmation
   -h, --help             help for delete
-      --library string   delete images from the provided library (default "https://library.sylabs.io")
+      --library string   delete images from the provided library
 
 SEE ALSO
 ~~~~~~~~
