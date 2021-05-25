@@ -6,8 +6,8 @@ const Footer = () => {
         main: [
           { name: 'Home', href: '/' },
           { name: 'News', href: '/news' },
-          { name: 'Help', href: '/help' },
-          
+          { name: 'Getting Help', href: '/help' },
+          { name: 'Contact', href: '/contact' },
         ],
       }
 
