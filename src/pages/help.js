@@ -4,6 +4,8 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
+import CtrlIQLogo from "../images/ctrliq.png"
+
 const HelpPage = () => (
   <Layout>
     <Seo title="Help" />
@@ -99,8 +101,9 @@ const HelpPage = () => (
           Support, services, and other commercial needs for Singularity are available by the project
           lead founder along with the primary core feature developers through CIQ (Ctrl IQ, Inc.).
         </p>
+        <img src={CtrlIQLogo} className="inline-flex justify-center items-center w-24 mb-5" /><br />
         <p className="mb-10 text-sm text-gray-900">
-          CIQ the leading innovator of modernization of high performance infrastructures and cloud-native
+          CIQ is the leading innovator of modernization of high performance infrastructures and cloud-native
           computing and directly offers support and services of several open source projects like Singularity,
           Warewulf, and Rocky Linux.
         </p>
@@ -111,7 +114,7 @@ const HelpPage = () => (
           aria-label="Singularity Support"
           title="Singularity Support"
         >
-          Get Support Here
+          Get Support
         </Link>
 
       </div>
