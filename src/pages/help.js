@@ -94,7 +94,7 @@ const HelpPage = () => (
       </div>
 
       <div className="max-w-2xl mb-10 mt-20 md:mx-auto sm:text-center lg:max-w-3xl md:mb-12">
-        <h2 className="max-w-xl mb-6 font-sans text-5xl font-extrabold leading-none tracking-tight text-gray-900 sm:text-6xl md:mx-auto">
+        <h2 className="max-w-xl mb-6 font-sans text-4xl font-extrabold leading-none tracking-tight text-gray-900 sm:text-5xl md:mx-auto">
           Commercial Support
         </h2>
         <p className="mb-5 text-base text-gray-700 md:text-lg">
