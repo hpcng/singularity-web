@@ -30,7 +30,7 @@ const HelpPage = () => (
             </p>
           </div>
           <Link
-            to="/user-docs/3.7/"
+            to="/docs"
             aria-label="Documentation"
             className="inline-flex items-center font-semibold transition-colors duration-200 text-blue-900 hover:text-blue-700"
           >
