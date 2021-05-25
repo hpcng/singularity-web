@@ -7,16 +7,16 @@ import Seo from "../components/seo"
 import CtrlIQLogo from "../images/ctrliq.png"
 
 const docsVersions = [
-    { version: '2.5' },
-    { version: '2.6' },
-    { version: '3.0' },
-    { version: '3.1' },
-    { version: '3.2' },
-    { version: '3.3' },
-    { version: '3.4' },
-    { version: '3.5' },
-    { version: '3.6' },
     { version: '3.7' },
+    { version: '3.6' },
+    { version: '3.5' },
+    { version: '3.4' },
+    { version: '3.3' },
+    { version: '3.2' },
+    { version: '3.1' },
+    { version: '3.0' },
+    { version: '2.6' },
+    { version: '2.5' },
 ]
 
 const DocsPage = () => (
