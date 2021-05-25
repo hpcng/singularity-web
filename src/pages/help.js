@@ -10,10 +10,10 @@ const HelpPage = () => (
     <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
       <div className="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
         <h2 className="max-w-lg mb-6 font-sans text-5xl font-extrabold leading-none tracking-tight text-gray-900 sm:text-6xl md:mx-auto">
-          Get Help
+          Community Help
         </h2>
         <p className="text-base text-gray-700 md:text-lg">
-          Singularity has many resources available for assistance.
+          Singularity has freely available support resources available for assistance.
         </p>
       </div>
       <div className="grid gap-4 row-gap-5 sm:grid-cols-2 lg:grid-cols-4">
@@ -89,6 +89,31 @@ const HelpPage = () => (
             View GitHub Repo
           </Link>
         </div>
+      </div>
+
+      <div className="max-w-2xl mb-10 mt-20 md:mx-auto sm:text-center lg:max-w-3xl md:mb-12">
+        <h2 className="max-w-xl mb-6 font-sans text-5xl font-extrabold leading-none tracking-tight text-gray-900 sm:text-6xl md:mx-auto">
+          Commercial Support
+        </h2>
+        <p className="mb-5 text-base text-gray-700 md:text-lg">
+          Support, services, and other commercial needs for Singularity are available by the project
+          lead founder along with the primary core feature developers through CIQ (Ctrl IQ, Inc.).
+        </p>
+        <p className="mb-10 text-sm text-gray-900">
+          CIQ the leading innovator of modernization of high performance infrastructures and cloud-native
+          computing and directly offers support and services of several open source projects like Singularity,
+          Warewulf, and Rocky Linux.
+        </p>
+
+        <Link
+          to="https://ctrliq.com/singularity"
+          class="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-blue-900 hover:bg-blue-800 focus:shadow-outline focus:outline-none"
+          aria-label="Singularity Support"
+          title="Singularity Support"
+        >
+          Get Support Here
+        </Link>
+
       </div>
     </div>
   </Layout>
