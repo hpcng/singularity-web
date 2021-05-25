@@ -56,16 +56,6 @@ const Header = ({ siteTitle }) => {
             </li>
             <li>
               <Link
-                to="/help"
-                aria-label="Help"
-                title="Help"
-                className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-blue-900"
-              >
-                Help
-              </Link>
-            </li>
-            <li>
-              <Link
                 to="/usecases"
                 aria-label="Use Cases"
                 title="Use Cases"
