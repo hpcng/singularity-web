@@ -7,6 +7,7 @@ import Seo from "../components/seo"
 import CtrlIQLogo from "../images/ctrliq.png"
 
 const docsVersions = [
+    { version: 'master' },
     { version: '3.7' },
     { version: '3.6' },
     { version: '3.5' },
