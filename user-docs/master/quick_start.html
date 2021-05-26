@@ -496,8 +496,8 @@ Found 22 container images for amd64 matching &quot;tensorflow&quot;:
     ...
 </pre></div>
 </div>
-<p>You can use the <a class="reference external" href="https://www.sylabs.io/guides/3.7/user-guide/cli/singularity_pull.html">pull</a>
-and <a class="reference external" href="https://www.sylabs.io/guides/3.7/user-guide/cli/singularity_build.html">build</a>
+<p>You can use the <a class="reference external" href="https://www.singularity.hpcng.org/user-docs/3.7/cli/singularity_pull.html">pull</a>
+and <a class="reference external" href="https://www.singularity.hpcng.org/user-docs/3.7/cli/singularity_build.html">build</a>
 commands to download pre-built images from an external resource like the
 <a class="reference external" href="https://cloud.sylabs.io/library">Container Library</a> or
 <a class="reference external" href="https://hub.docker.com/">Docker Hub</a>.</p>
@@ -546,7 +546,7 @@ from the Container Library:</p>
 </div>
 <div class="section" id="shell">
 <h3>Shell<a class="headerlink" href="#shell" title="Permalink to this headline">¶</a></h3>
-<p>The <a class="reference external" href="https://www.sylabs.io/guides/3.7/user-guide/cli/singularity_shell.html">shell</a>
+<p>The <a class="reference external" href="https://www.singularity.hpcng.org/user-docs/3.7/cli/singularity_shell.html">shell</a>
 command allows you to spawn a new shell within your container and interact with
 it as though it were a small virtual machine.</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ singularity shell lolcow_latest.sif
@@ -574,7 +574,7 @@ exited.</p>
 </div>
 <div class="section" id="executing-commands">
 <h3>Executing Commands<a class="headerlink" href="#executing-commands" title="Permalink to this headline">¶</a></h3>
-<p>The <a class="reference external" href="https://www.sylabs.io/guides/3.7/user-guide/cli/singularity_exec.html">exec</a>
+<p>The <a class="reference external" href="https://www.singularity.hpcng.org/user-docs/3.7/cli/singularity_exec.html">exec</a>
 command allows you to execute a custom command within a container by specifying
 the image file. For instance, to execute the <code class="docutils literal notranslate"><span class="pre">cowsay</span></code> program within the
 <code class="docutils literal notranslate"><span class="pre">lolcow_latest.sif</span></code> container:</p>
@@ -608,7 +608,7 @@ disappears.</p>
 <span id="runcontainer"></span><h3>Running a container<a class="headerlink" href="#running-a-container" title="Permalink to this headline">¶</a></h3>
 <p>Singularity containers contain <a class="reference internal" href="definition_files.html#runscript"><span class="std std-ref">runscripts</span></a>. These are user
 defined scripts that define the actions a container should perform when someone
-runs it. The runscript can be triggered with the <a class="reference external" href="https://www.sylabs.io/guides/3.7/user-guide/cli/singularity_run.html">run</a>
+runs it. The runscript can be triggered with the <a class="reference external" href="https://www.singularity.hpcng.org/user-docs/3.7/cli/singularity_run.html">run</a>
 command, or simply by calling the container as though it were an executable.</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ singularity run lolcow_latest.sif
  _____________________________________
