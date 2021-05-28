@@ -1,13 +1,10 @@
 import * as React from "react"
-import { useState } from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
 
 import logo from "../images/logo.png"
 
 const Header = ({ siteTitle }) => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
   return (
     <div className="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
       <div className="relative flex items-center justify-between">
