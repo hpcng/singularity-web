@@ -5,6 +5,7 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 
 const docsVersions = [
+    { version: 'master' },
     { version: '3.7' },
     { version: '3.6' },
     { version: '3.5' },

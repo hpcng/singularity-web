@@ -128,9 +128,9 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#working-with-definition-files">Working with Definition Files</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#mandatory-header-keywords-remotely-boostrapped">Mandatory Header Keywords: Remotely Boostrapped</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#mandatory-header-keywords-remotely-bootstrapped">Mandatory Header Keywords: Remotely Bootstrapped</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#remotely-bootstrapped-and-built-containers">Remotely Bootstrapped and Built Containers</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#mandatory-header-keywords-locally-boostrapped">Mandatory Header Keywords: Locally Boostrapped</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#mandatory-header-keywords-locally-bootstrapped">Mandatory Header Keywords: Locally Bootstrapped</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#optional-header-keywords">Optional Header Keywords</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#private-images-and-registries">Private Images and Registries</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#directing-execution">Directing Execution</a></li>
@@ -148,8 +148,8 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#building-containers-for-singularity-from-oci-images">Building Containers for Singularity from OCI Images</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#working-locally-from-the-singularity-command-line-oci-boostrap-agent">Working Locally from the Singularity Command Line: <code class="docutils literal notranslate"><span class="pre">oci</span></code> Boostrap Agent</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#working-locally-from-the-singularity-command-line-oci-archive-boostrap-agent">Working Locally from the Singularity Command Line: <code class="docutils literal notranslate"><span class="pre">oci-archive</span></code> Boostrap Agent</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#working-locally-from-the-singularity-command-line-oci-bootstrap-agent">Working Locally from the Singularity Command Line: <code class="docutils literal notranslate"><span class="pre">oci</span></code> Bootstrap Agent</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#working-locally-from-the-singularity-command-line-oci-archive-bootstrap-agent">Working Locally from the Singularity Command Line: <code class="docutils literal notranslate"><span class="pre">oci-archive</span></code> Bootstrap Agent</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#working-from-the-singularity-command-line-with-remotely-hosted-images">Working from the Singularity Command Line with Remotely Hosted Images</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#working-with-definition-files-mandatory-header-keywords">Working with Definition Files: Mandatory Header Keywords</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#working-with-definition-files-additonal-considerations">Working with Definition Files: Additonal Considerations</a></li>
@@ -327,7 +327,7 @@ INFO:    Image cached as SIF at /home/vagrant/.singularity/cache/oci-tmp/a692b57
                 ||     ||
 </pre></div>
 </div>
-<p>Here <code class="docutils literal notranslate"><span class="pre">docker</span></code> is prepended to ensure that the <code class="docutils literal notranslate"><span class="pre">run</span></code> command of Singularity is instructed to boostrap container creation based upon this Docker image, thus creating a complete URI for Singularity. Singularity subsequently downloads <a class="reference internal" href="#sec-oci-overview"><span class="std std-ref">all the OCI blobs that comprise this image</span></a>, and converts them into a <em>single</em> SIF file - the native format for Singularity containers. Because this image from Docker Hub is cached locally in the <code class="docutils literal notranslate"><span class="pre">$HOME/.singularity/cache/oci-tmp/&lt;org.opencontainers.image.ref.name&gt;/lolcow_latest.sif</span></code> directory, where <code class="docutils literal notranslate"><span class="pre">&lt;org.opencontainers.image.ref.name&gt;</span></code> will be replaced by the appropriate hash for the container, the image does not need to be downloaded again (from Docker Hub) the next time a Singularity <code class="docutils literal notranslate"><span class="pre">run</span></code> is executed. In other words, the cached copy is sensibly reused:</p>
+<p>Here <code class="docutils literal notranslate"><span class="pre">docker</span></code> is prepended to ensure that the <code class="docutils literal notranslate"><span class="pre">run</span></code> command of Singularity is instructed to bootstrap container creation based upon this Docker image, thus creating a complete URI for Singularity. Singularity subsequently downloads <a class="reference internal" href="#sec-oci-overview"><span class="std std-ref">all the OCI blobs that comprise this image</span></a>, and converts them into a <em>single</em> SIF file - the native format for Singularity containers. Because this image from Docker Hub is cached locally in the <code class="docutils literal notranslate"><span class="pre">$HOME/.singularity/cache/oci-tmp/&lt;org.opencontainers.image.ref.name&gt;/lolcow_latest.sif</span></code> directory, where <code class="docutils literal notranslate"><span class="pre">&lt;org.opencontainers.image.ref.name&gt;</span></code> will be replaced by the appropriate hash for the container, the image does not need to be downloaded again (from Docker Hub) the next time a Singularity <code class="docutils literal notranslate"><span class="pre">run</span></code> is executed. In other words, the cached copy is sensibly reused:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ singularity run docker://godlovedc/lolcow
  _________________________________________
 / Soap and education are not as sudden as \
@@ -634,7 +634,7 @@ INFO:    Build complete: mylolcow_latest.sif
 <p>This <code class="docutils literal notranslate"><span class="pre">build</span></code> results in a <em>local</em> copy of the Docker image in SIF, as did <code class="docutils literal notranslate"><span class="pre">pull</span></code> <a class="reference internal" href="#sec-use-prebuilt-public-docker-images"><span class="std std-ref">above</span></a>. Here, <code class="docutils literal notranslate"><span class="pre">build</span></code> has named the Singularity container <code class="docutils literal notranslate"><span class="pre">mylolcow_latest.sif</span></code>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p><code class="docutils literal notranslate"><span class="pre">docker://godlovedc/lolcow</span></code> is the <strong>target</strong> provided as input for <code class="docutils literal notranslate"><span class="pre">build</span></code>. Armed with this target, <code class="docutils literal notranslate"><span class="pre">build</span></code> applies the appropriate boostrap agent to create the container - in this case, one appropriate for Docker Hub.</p>
+<p><code class="docutils literal notranslate"><span class="pre">docker://godlovedc/lolcow</span></code> is the <strong>target</strong> provided as input for <code class="docutils literal notranslate"><span class="pre">build</span></code>. Armed with this target, <code class="docutils literal notranslate"><span class="pre">build</span></code> applies the appropriate bootstrap agent to create the container - in this case, one appropriate for Docker Hub.</p>
 </div>
 <p>In addition to a read-only container image in SIF (<strong>default</strong>), <code class="docutils literal notranslate"><span class="pre">build</span></code> allows for the creation of a writable (ch)root <em>directory</em> called a <strong>sandbox</strong> for interactive development via the <code class="docutils literal notranslate"><span class="pre">--sandbox</span></code> option:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ singularity build --sandbox mylolcow_latest_sandbox docker://godlovedc/lolcow
@@ -705,7 +705,7 @@ INFO:    Setting tag latest
 <img alt="_images/lolcow_sylabsrb.png" src="_images/lolcow_sylabsrb.png" />
 </div>
 <div class="section" id="locally-available-images-cached-by-docker">
-<span id="sec-mandatory-headers-docker-locally-boostrapped-cli"></span><h4>Locally Available Images: Cached by Docker<a class="headerlink" href="#locally-available-images-cached-by-docker" title="Permalink to this headline">¶</a></h4>
+<span id="sec-mandatory-headers-docker-locally-bootstrapped-cli"></span><h4>Locally Available Images: Cached by Docker<a class="headerlink" href="#locally-available-images-cached-by-docker" title="Permalink to this headline">¶</a></h4>
 <p>Singularity containers can be built at the command line from images cached <em>locally</em> by Docker. Suppose, for example:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ sudo docker images
 REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
@@ -739,7 +739,7 @@ INFO:    Build complete: lolcow_from_docker_cache.sif
 <p>results in <code class="docutils literal notranslate"><span class="pre">lolcow_from_docker_cache.sif</span></code> for native use by Singularity. There are two important differences in syntax evident in the above <code class="docutils literal notranslate"><span class="pre">build</span></code> command:</p>
 <blockquote>
 <div><ol class="arabic simple">
-<li><p>The <code class="docutils literal notranslate"><span class="pre">docker</span></code> part of the URI has been appended by <code class="docutils literal notranslate"><span class="pre">daemon</span></code>. This ensures Singularity seek an image locally cached by Docker to boostrap the conversion process to SIF, as opposed to attempting to retrieve an image remotely hosted via Docker Hub.</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">docker</span></code> part of the URI has been appended by <code class="docutils literal notranslate"><span class="pre">daemon</span></code>. This ensures Singularity seek an image locally cached by Docker to bootstrap the conversion process to SIF, as opposed to attempting to retrieve an image remotely hosted via Docker Hub.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sudo</span></code> is prepended to the <code class="docutils literal notranslate"><span class="pre">build</span></code> command for Singularity; this is required as the Docker daemon executes as <code class="docutils literal notranslate"><span class="pre">root</span></code>. However, if the user issuing the <code class="docutils literal notranslate"><span class="pre">build</span></code> command is a member of the <code class="docutils literal notranslate"><span class="pre">docker</span></code> Linux group, then <code class="docutils literal notranslate"><span class="pre">sudo</span></code> need not be prepended.</p></li>
 </ol>
 </div></blockquote>
@@ -827,7 +827,7 @@ INFO:    Build complete: lolcow_tar.sif
 <p>There are two important differences in syntax evident in the above <code class="docutils literal notranslate"><span class="pre">build</span></code> command:</p>
 <blockquote>
 <div><ol class="arabic simple">
-<li><p>The <code class="docutils literal notranslate"><span class="pre">docker</span></code> part of the URI has been appended by <code class="docutils literal notranslate"><span class="pre">archive</span></code>. This ensures Singularity seek a Docker-format image archive stored locally as <code class="docutils literal notranslate"><span class="pre">lolcow.tar</span></code> to boostrap the conversion process to SIF, as opposed to attempting to retrieve an image remotely hosted via Docker Hub.</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">docker</span></code> part of the URI has been appended by <code class="docutils literal notranslate"><span class="pre">archive</span></code>. This ensures Singularity seek a Docker-format image archive stored locally as <code class="docutils literal notranslate"><span class="pre">lolcow.tar</span></code> to bootstrap the conversion process to SIF, as opposed to attempting to retrieve an image remotely hosted via Docker Hub.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sudo</span></code> is <em>not</em> prepended to the <code class="docutils literal notranslate"><span class="pre">build</span></code> command for Singularity. This is <em>not</em> required if the executing user has the appropriate access privileges to the stored file.</p></li>
 </ol>
 </div></blockquote>
@@ -864,8 +864,8 @@ INFO:    Setting tag latest
 </div>
 <div class="section" id="working-with-definition-files">
 <span id="sec-singularity-build-def-files"></span><h3>Working with Definition Files<a class="headerlink" href="#working-with-definition-files" title="Permalink to this headline">¶</a></h3>
-<div class="section" id="mandatory-header-keywords-remotely-boostrapped">
-<span id="sec-def-file-mandatory-headers-remotely-boostrapped"></span><h4>Mandatory Header Keywords: Remotely Boostrapped<a class="headerlink" href="#mandatory-header-keywords-remotely-boostrapped" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="mandatory-header-keywords-remotely-bootstrapped">
+<span id="sec-def-file-mandatory-headers-remotely-bootstrapped"></span><h4>Mandatory Header Keywords: Remotely Bootstrapped<a class="headerlink" href="#mandatory-header-keywords-remotely-bootstrapped" title="Permalink to this headline">¶</a></h4>
 <p>Akin to a set of blueprints that explain how to build a custom container, Singularity definition files (or “def files”) are considered in detail <a class="reference internal" href="definition_files.html#definition-files"><span class="std std-ref">elsewhere in this manual</span></a>. Therefore, only def file nuances specific to interoperability with Docker receive consideration here.</p>
 <p>Singularity definition files are comprised of two parts - a <strong>header</strong> plus <strong>sections</strong>.</p>
 <p>When working with repositories such as Docker Hub, <code class="docutils literal notranslate"><span class="pre">Bootstrap</span></code> and <code class="docutils literal notranslate"><span class="pre">From</span></code> are <strong>mandatory</strong> keywords within the header; for example, if the file <code class="docutils literal notranslate"><span class="pre">lolcow.def</span></code> has contents</p>
@@ -901,7 +901,7 @@ INFO:    Setting tag latest
 </div>
 <div class="section" id="remotely-bootstrapped-and-built-containers">
 <h4>Remotely Bootstrapped and Built Containers<a class="headerlink" href="#remotely-bootstrapped-and-built-containers" title="Permalink to this headline">¶</a></h4>
-<p>Consider again <a class="reference internal" href="#sec-def-file-mandatory-headers-remotely-boostrapped"><span class="std std-ref">the definition file used the outset of the section above</span></a>:</p>
+<p>Consider again <a class="reference internal" href="#sec-def-file-mandatory-headers-remotely-bootstrapped"><span class="std std-ref">the definition file used the outset of the section above</span></a>:</p>
 <div class="highlight-singularity notranslate"><div class="highlight"><pre><span></span><span class="k">Bootstrap</span>: docker
 <span class="k">From</span>: godlovedc/lolcow
 </pre></div>
@@ -946,8 +946,8 @@ INFO:    Setting tag latest
 <p>The Sylabs Cloud is currently available as an Alpha Preview. In addition to the Singularity Library and Remote Builder, a Keystore service is also available. All three services make use of a <em>freemium</em> pricing model in supporting Singularity Community Edition. In contrast, all three services are included in SingularityPRO - an enterprise grade subscription for Singularity that is offered for a fee from Sylabs. For addtional details regarding the different offerings available for Singularity, please <a class="reference external" href="https://www.sylabs.io/singularity/">consult the Sylabs website</a>.</p>
 </div>
 </div>
-<div class="section" id="mandatory-header-keywords-locally-boostrapped">
-<span id="sec-mandatory-headers-docker-locally-boostrapped-def-file"></span><h4>Mandatory Header Keywords: Locally Boostrapped<a class="headerlink" href="#mandatory-header-keywords-locally-boostrapped" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="mandatory-header-keywords-locally-bootstrapped">
+<span id="sec-mandatory-headers-docker-locally-bootstrapped-def-file"></span><h4>Mandatory Header Keywords: Locally Bootstrapped<a class="headerlink" href="#mandatory-header-keywords-locally-bootstrapped" title="Permalink to this headline">¶</a></h4>
 <p>When <code class="docutils literal notranslate"><span class="pre">docker-daemon</span></code> is the bootstrap agent in a Singularity definition file, SIF containers can be created from images cached locally by Docker. Suppose the definition file <code class="docutils literal notranslate"><span class="pre">lolcow-d.def</span></code> has contents:</p>
 <div class="highlight-singularity notranslate"><div class="highlight"><pre><span></span><span class="k">Bootstrap</span>: docker-daemon
 <span class="k">From</span>: godlovedc/lolcow:latest
@@ -982,7 +982,7 @@ INFO:    Creating SIF file...
 INFO:    Build complete: lolcow_from_docker_cache.sif
 </pre></div>
 </div>
-<p>In other words, this is the definition-file counterpart to <a class="reference internal" href="#sec-mandatory-headers-docker-locally-boostrapped-cli"><span class="std std-ref">the command-line invocation provided above</span></a>.</p>
+<p>In other words, this is the definition-file counterpart to <a class="reference internal" href="#sec-mandatory-headers-docker-locally-bootstrapped-cli"><span class="std std-ref">the command-line invocation provided above</span></a>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">sudo</span></code> requirement in the above <code class="docutils literal notranslate"><span class="pre">build</span></code> request originates from Singularity; it is the standard requirement when use is made of definition files. In other words, membership of the issuing user in the <code class="docutils literal notranslate"><span class="pre">docker</span></code> Linux group is of no consequence in this context.</p>
@@ -1445,14 +1445,14 @@ INFO:    Build complete: lolcow_latest.sif
 </div>
 <div class="section" id="building-containers-for-singularity-from-oci-images">
 <h3>Building Containers for Singularity from OCI Images<a class="headerlink" href="#building-containers-for-singularity-from-oci-images" title="Permalink to this headline">¶</a></h3>
-<div class="section" id="working-locally-from-the-singularity-command-line-oci-boostrap-agent">
-<span id="cli-oci-bootstrap-agent"></span><h4>Working Locally from the Singularity Command Line: <code class="docutils literal notranslate"><span class="pre">oci</span></code> Boostrap Agent<a class="headerlink" href="#working-locally-from-the-singularity-command-line-oci-boostrap-agent" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="working-locally-from-the-singularity-command-line-oci-bootstrap-agent">
+<span id="cli-oci-bootstrap-agent"></span><h4>Working Locally from the Singularity Command Line: <code class="docutils literal notranslate"><span class="pre">oci</span></code> Bootstrap Agent<a class="headerlink" href="#working-locally-from-the-singularity-command-line-oci-bootstrap-agent" title="Permalink to this headline">¶</a></h4>
 <p>The example detailed in the previous section can be used to illustrate how a SIF file for use by Singularity can be created from the local cache - an albeit contrived example, that works because the Singularity cache is compliant with the OCI Image Layout Specification.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Of course, the <code class="docutils literal notranslate"><span class="pre">oci</span></code> bootstrap agent can be applied to <em>any</em> <strong>bundle</strong> that is compliant with the OCI Image Layout Specification - not <em>just</em> the Singularity cache, as created by executing a Singularity <code class="docutils literal notranslate"><span class="pre">pull</span></code> command.</p>
 </div>
-<p>In this local case, the <code class="docutils literal notranslate"><span class="pre">build</span></code> command of Singularity makes use of the <code class="docutils literal notranslate"><span class="pre">oci</span></code> boostrap agent as follows:</p>
+<p>In this local case, the <code class="docutils literal notranslate"><span class="pre">build</span></code> command of Singularity makes use of the <code class="docutils literal notranslate"><span class="pre">oci</span></code> bootstrap agent as follows:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ singularity build ~/lolcow_oci_cache.sif oci://$HOME/.singularity/cache/oci:a692b57abc43035b197b10390ea2c12855d21649f2ea2cc28094d18b93360eeb
 INFO:    Starting build...
 Getting image source signatures
@@ -1471,7 +1471,7 @@ INFO:    Build complete: /home/vagrant/lolcow_oci_cache.sif
 </pre></div>
 </div>
 <p>As can be seen, this results in the SIF file <code class="docutils literal notranslate"><span class="pre">lolcow_oci_cache.sif</span></code> in the user’s home directory.</p>
-<p>The syntax for the <code class="docutils literal notranslate"><span class="pre">oci</span></code> boostrap agent requires some elaboration, however. In this case, and as illustrated above, <code class="docutils literal notranslate"><span class="pre">$HOME/.singularity/cache/oci</span></code> has content:</p>
+<p>The syntax for the <code class="docutils literal notranslate"><span class="pre">oci</span></code> bootstrap agent requires some elaboration, however. In this case, and as illustrated above, <code class="docutils literal notranslate"><span class="pre">$HOME/.singularity/cache/oci</span></code> has content:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ ls
 blobs  index.json  oci-layout
 </pre></div>
@@ -1485,11 +1485,11 @@ FATAL:   While performing build: conveyor failed to get: more than one image in 
 <p>does not <em>uniquely</em> specify an image from which to bootstrap the <code class="docutils literal notranslate"><span class="pre">build</span></code> process. In other words, there are multiple images referenced via <code class="docutils literal notranslate"><span class="pre">org.opencontainers.image.ref.name</span></code> in the <code class="docutils literal notranslate"><span class="pre">index.json</span></code> file. By appending <code class="docutils literal notranslate"><span class="pre">:a692b57abc43035b197b10390ea2c12855d21649f2ea2cc28094d18b93360eeb</span></code> to <code class="docutils literal notranslate"><span class="pre">oci</span></code> in this example, the image is uniquely specified, and the container created in SIF (as illustrated previously).</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Executing the Singularity <code class="docutils literal notranslate"><span class="pre">pull</span></code> command multiple times on the same image produces multiple <code class="docutils literal notranslate"><span class="pre">org.opencontainers.image.ref.name</span></code> entries in the <code class="docutils literal notranslate"><span class="pre">index.json</span></code> file. Appending the value of the unique <code class="docutils literal notranslate"><span class="pre">org.opencontainers.image.ref.name</span></code> allows for use of the <code class="docutils literal notranslate"><span class="pre">oci</span></code> boostrap agent.</p>
+<p>Executing the Singularity <code class="docutils literal notranslate"><span class="pre">pull</span></code> command multiple times on the same image produces multiple <code class="docutils literal notranslate"><span class="pre">org.opencontainers.image.ref.name</span></code> entries in the <code class="docutils literal notranslate"><span class="pre">index.json</span></code> file. Appending the value of the unique <code class="docutils literal notranslate"><span class="pre">org.opencontainers.image.ref.name</span></code> allows for use of the <code class="docutils literal notranslate"><span class="pre">oci</span></code> bootstrap agent.</p>
 </div>
 </div>
-<div class="section" id="working-locally-from-the-singularity-command-line-oci-archive-boostrap-agent">
-<span id="cli-oci-archive-bootstrap-agent"></span><h4>Working Locally from the Singularity Command Line: <code class="docutils literal notranslate"><span class="pre">oci-archive</span></code> Boostrap Agent<a class="headerlink" href="#working-locally-from-the-singularity-command-line-oci-archive-boostrap-agent" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="working-locally-from-the-singularity-command-line-oci-archive-bootstrap-agent">
+<span id="cli-oci-archive-bootstrap-agent"></span><h4>Working Locally from the Singularity Command Line: <code class="docutils literal notranslate"><span class="pre">oci-archive</span></code> Bootstrap Agent<a class="headerlink" href="#working-locally-from-the-singularity-command-line-oci-archive-bootstrap-agent" title="Permalink to this headline">¶</a></h4>
 <p>OCI archives, i.e., <code class="docutils literal notranslate"><span class="pre">tar</span></code> files obeying the OCI Image Layout Specification <a class="reference internal" href="#misc-oci-image-layout-specification"><span class="std std-ref">as discussed previously</span></a>, can seed creation of a container for Singularity. In this case, use is made of the <code class="docutils literal notranslate"><span class="pre">oci-archive</span></code> bootstrap agent.</p>
 <p>To illustrate this agent, it is convenient to build the archive from the Singularity cache. After a single <code class="docutils literal notranslate"><span class="pre">pull</span></code> of the <code class="docutils literal notranslate"><span class="pre">godlovedc/lolcow</span></code> image from Docker Hub, a <code class="docutils literal notranslate"><span class="pre">tar</span></code> format archive can be generated from the <code class="docutils literal notranslate"><span class="pre">$HOME/.singularity/cache/oci</span></code> directory as follows:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ tar cvf $HOME/godlovedc_lolcow.tar *
@@ -1533,7 +1533,7 @@ INFO:    Build complete: lolcow_oci_tarfile.sif
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Because the layers of a Docker image as well as the blobs of an OCI image are already <code class="docutils literal notranslate"><span class="pre">gzip</span></code> compressed, there is a minimal advantage to having compressed archives representing OCI images. For this reason, the <code class="docutils literal notranslate"><span class="pre">build</span></code> detailed above boostraps a SIF file for use by Singularity from only a <code class="docutils literal notranslate"><span class="pre">tar</span></code> file, and not a <code class="docutils literal notranslate"><span class="pre">tar.gz</span></code> file.</p>
+<p>Because the layers of a Docker image as well as the blobs of an OCI image are already <code class="docutils literal notranslate"><span class="pre">gzip</span></code> compressed, there is a minimal advantage to having compressed archives representing OCI images. For this reason, the <code class="docutils literal notranslate"><span class="pre">build</span></code> detailed above bootstraps a SIF file for use by Singularity from only a <code class="docutils literal notranslate"><span class="pre">tar</span></code> file, and not a <code class="docutils literal notranslate"><span class="pre">tar.gz</span></code> file.</p>
 </div>
 </div>
 <div class="section" id="working-from-the-singularity-command-line-with-remotely-hosted-images">
@@ -1718,7 +1718,7 @@ Removing /home/dave/.singularity/cache/oras
 <ol class="arabic simple" start="2">
 <li><p>Maintaining containers built from Docker and OCI images</p></li>
 </ol>
-<p>SIF files created by boostrapping from Docker or OCI images are, of course, only as current as the most recent Singularity <code class="docutils literal notranslate"><span class="pre">pull</span></code>. Subsequent retrievals <em>may</em> result in containers that are built and/or behave differently, owing to changes in the corresponding <code class="docutils literal notranslate"><span class="pre">Dockerfile</span></code>. A prudent practice then, for maintaining containers of value, is based upon use of Singularity definition files. Styled and implemented after a <code class="docutils literal notranslate"><span class="pre">Dockerfile</span></code> retrieved at some point in time, use of <code class="docutils literal notranslate"><span class="pre">diff</span></code> on subsequent versions of this same file, can be employed to inform maintenance of the corresponding Singularity definition file. Understanding build specifications at this level of detail places container creators in a much more sensible position prior to signing with an encrypted key. Thus the best practice is:</p>
+<p>SIF files created by bootstrapping from Docker or OCI images are, of course, only as current as the most recent Singularity <code class="docutils literal notranslate"><span class="pre">pull</span></code>. Subsequent retrievals <em>may</em> result in containers that are built and/or behave differently, owing to changes in the corresponding <code class="docutils literal notranslate"><span class="pre">Dockerfile</span></code>. A prudent practice then, for maintaining containers of value, is based upon use of Singularity definition files. Styled and implemented after a <code class="docutils literal notranslate"><span class="pre">Dockerfile</span></code> retrieved at some point in time, use of <code class="docutils literal notranslate"><span class="pre">diff</span></code> on subsequent versions of this same file, can be employed to inform maintenance of the corresponding Singularity definition file. Understanding build specifications at this level of detail places container creators in a much more sensible position prior to signing with an encrypted key. Thus the best practice is:</p>
 <blockquote>
 <div><p>“Maintain detailed build specifications for containers, rather than opaque runtimes”</p>
 </div></blockquote>
@@ -1796,9 +1796,9 @@ Removing /home/dave/.singularity/cache/oras
 </ol>
 <p>Maintenance of the Singularity cache (i.e., <code class="docutils literal notranslate"><span class="pre">$HOME/.singularity/cache</span></code>) requires manual intervention at this time. By <strong>carefully</strong> issuing the command <code class="docutils literal notranslate"><span class="pre">rm</span> <span class="pre">-rf</span> <span class="pre">$HOME/.singularity/cache</span></code>, its local cache will be cleared of all downloaded images.</p>
 <ol class="arabic simple" start="5">
-<li><p>The <code class="docutils literal notranslate"><span class="pre">http</span></code> and <code class="docutils literal notranslate"><span class="pre">https</span></code> are <code class="docutils literal notranslate"><span class="pre">pull</span></code> only boostrap agents</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">http</span></code> and <code class="docutils literal notranslate"><span class="pre">https</span></code> are <code class="docutils literal notranslate"><span class="pre">pull</span></code> only bootstrap agents</p></li>
 </ol>
-<p><code class="docutils literal notranslate"><span class="pre">http</span></code> and <code class="docutils literal notranslate"><span class="pre">https</span></code> are the only examples of <code class="docutils literal notranslate"><span class="pre">pull</span></code> only boostrap agents. In other words, when used with Singularity’s <code class="docutils literal notranslate"><span class="pre">pull</span></code> command, the result is a local copy of, for example, an OCI archive image. This means that a subsequent step is necessary to actually create a SIF container for use by Singularity - a step involving the <code class="docutils literal notranslate"><span class="pre">oci-archive</span></code> bootstrap agent in the case of an OCI image archive.</p>
+<p><code class="docutils literal notranslate"><span class="pre">http</span></code> and <code class="docutils literal notranslate"><span class="pre">https</span></code> are the only examples of <code class="docutils literal notranslate"><span class="pre">pull</span></code> only bootstrap agents. In other words, when used with Singularity’s <code class="docutils literal notranslate"><span class="pre">pull</span></code> command, the result is a local copy of, for example, an OCI archive image. This means that a subsequent step is necessary to actually create a SIF container for use by Singularity - a step involving the <code class="docutils literal notranslate"><span class="pre">oci-archive</span></code> bootstrap agent in the case of an OCI image archive.</p>
 </div></blockquote>
 <p>Like <a class="reference internal" href="#sec-best-practices"><span class="std std-ref">best practices</span></a>, troubleshooting scenarios and solutions emerge from experience. Contributions that allow additional experiences to be shared  are always encouraged. Please refer to <a class="reference internal" href="contributing.html#contributing"><span class="std std-ref">Contributing</span></a> for additional details.</p>
 </div>
