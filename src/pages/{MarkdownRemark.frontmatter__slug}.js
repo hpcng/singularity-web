@@ -25,7 +25,7 @@ export default function Template({
                             {frontmatter.title}
                         </h1>
                     </div>
-                    <p className="text-base text-black prose"
+                    <div className="text-base text-black prose"
                        dangerouslySetInnerHTML={{__html: html }}
                     />
                 </div>
