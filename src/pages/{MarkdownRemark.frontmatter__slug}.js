@@ -27,8 +27,7 @@ export default function Template({
                     </div>
                     <p className="text-base text-black prose"
                        dangerouslySetInnerHTML={{__html: html }}
-                    >
-                    </p>
+                    />
                 </div>
             </div>
         </div>
