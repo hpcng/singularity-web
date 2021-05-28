@@ -4,8 +4,6 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
-import CtrlIQLogo from "../images/ctrliq.png"
-
 const contacts = [
     {
         name: 'Project Leads',
