@@ -106,14 +106,14 @@ const IndexPage = () => (
               </h3>
           </div>
           <div className="md:mx-auto sm:text-center lg:max-w-2xl">
-            <iframe width="100%" height="400" src="https://www.youtube-nocookie.com/embed/UbxCwcreJqU?controls=1&&amp;rel=0" title="YouTube video player" frameborder="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe className="rounded-lg" width="100%" height="400" src="https://www.youtube-nocookie.com/embed/UbxCwcreJqU?controls=1&&amp;rel=0" title="YouTube video player" frameborder="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
         </div>
       </div>
 
 
 
-      <div className="relative px-4 mb-10 sm:px-0 bg-gray-100">
+      <div className="relative px-4 mb-10 sm:px-0 pb-10 bg-gray-100">
 
         <div className="px-4 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
           <div className="px-4 py-8 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-10">
