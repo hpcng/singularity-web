@@ -8,28 +8,28 @@ import Seo from "../components/seo"
 
 const gettingStartedLinks = [
     {
-        name: 'Download',
-        href: 'https://github.com/hpcng/singularity/releases/tag/v3.7.4',
+        name: 'Download Source Code',
+        href: 'https://github.com/hpcng/singularity/releases',
         description:
             'Grab the latest stable release of Singularity from the official GitHub repository.',
         icon: DownloadIcon,
-        button: 'Download'
+        button: 'Build'
     },
     {
-        name: 'User Quick Start',
+        name: 'Quick Start Guide',
         href: 'https://singularity.hpcng.org/user-docs/master/quick_start.html',
         description:
-            'Check out our user quick start documentation to get setup locally.',
+            'Check out the quick start documentation to get setup for deployment in a hurry.',
         icon: NewspaperIcon,
         button: 'Get Started'
     },
     {
-        name: 'Admin Quick Start',
-        href: 'https://singularity.hpcng.org/user-docs/master/quick_start.html',
+        name: 'Supported Binary Packages',
+        href: 'https://repo.ctrliq.com',
         description:
-            'Check out our admin quick start documentation to get setup for deployment.',
-        icon: NewspaperIcon,
-        button: 'Get Started'
+            'Supported Singularity package releases can be found at CIQ\'s repo.',
+        icon: SupportIcon,
+        button: 'Install'
     },
 ]
 
@@ -56,7 +56,7 @@ const GettingStartedPage = () => (
                 </h2>
                 <div className="grid grid-cols-1 gap-y-20 lg:grid-cols-3 lg:gap-y-0 lg:gap-x-8">
                     {gettingStartedLinks.map((link) => (
-                        <div key={link.name} className="flex flex-col bg-white rounded-2xl shadow-xl border border-gray-200">
+                        <div key={link.name} className="flex mt-10 mb-10 flex-col bg-white rounded-2xl shadow-xl border border-gray-200">
                             <div className="flex-1 relative pt-16 px-6 pb-8 md:px-8">
                                 <div className="absolute top-0 p-5 inline-block bg-blue-900 rounded-xl shadow-lg transform -translate-y-1/2">
                                     <link.icon className="h-6 w-6 text-white" aria-hidden="true" />
