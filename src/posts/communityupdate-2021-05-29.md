@@ -4,9 +4,10 @@ date: "2021-05-29"
 title: "Community Update (May 2021)!"
 ---
 
-So this month we've seen a lot of changes in the Singularity project. First and foremost, Sylabs has forked the Singularity project into their own commercially controlled repo. Please join us in thanking Sylabs for all of the support they have shown the Singularity project over the years and we are looking forward to seeing where they take their fork.
+This month we've seen a lot of changes in the Singularity project.
+First and foremost, Sylabs™ has forked the Singularity repository creating their own commercially controlled repository and project. Please join us in thanking Sylabs™ for all of the support they have shown the Singularity project over the years. We are looking forward to seeing where they take their fork and wish them the best.
 
-But this change does affect this community project in several ways:
+This change in organization affects the community project in several ways:
 
 * In an effort to bring awareness to the commercially supported Singularity options, Sylabs was the primary host for the Singularity website as well as documentation. This means we've had to create the community site and documentation pages, which is what you see here.
 * We were lucky to have David Trudgian dedicated as the project's release manager. With the fork, David resigned this position, and luckily the founding organization of Singularity, Berkeley Lab, has stepped up. From this point forward, Krishna Muriki will be the official Singularity project's release manager. Thank you Krishna!
