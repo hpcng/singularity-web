@@ -11,26 +11,24 @@ First and foremost, Sylabs™ has forked the Singularity repository creating the
 This change in organization affects the community project in several ways:
 
 ## Website and Documentation
-In an effort to bring awareness to the commercially supported Singularity options, Sylabs™ was the primary host for the Singularity website as well as documentation. Now that they have forked and separated themselves from the community version, we've had to create the community site and documentation pages, which is what you see here. If you are interested in adding or making changes to this Singularity website, please send PRs to http://www.github.com/hpcng/singularity-web. 
+Early on, in an effort to bring awareness to the Sylabs commercial Singularity product, Sylabs™ became the primary host for the Singularity website as well as documentation. Now that they have forked and separated themselves from the community version, we've had to create the community site and documentation pages, which is what you see here. If you are interested in adding or making changes to this Singularity website, please send PRs to http://www.github.com/hpcng/singularity-web. 
 
 ## Release Manager
-We were lucky to have David Trudgian via Sylabs dedicated as the project's release manager over the past year and a half but as a result of the Sylabs™ fork, David resigned this position.
+We are grateful to have had David Trudgian (via Sylabs) dedicated as the project's release manager over the past year and a half but as a result of the Sylabs™ fork and him being a Sylabs employee, David resigned this position.
 
 Luckily the original founding entity behind Singularity, Lawrence Berkeley National Laboratory, has stepped up and as a result, Krishna Muriki will be the official Singularity project's release manager.
 
 Thank you Krishna!
 
 ## Security Team
-Sylabs™ also acted as the sole security escalation pathway for the Singularity project. We've now moved this role back into the community and Dave Dykstra from Fermi National Laboratory has stepped up to lead the project's security intiative.
+Sylabs™ also acted as the sole security escalation pathway for the Singularity project. We've now moved this role back into the community and Dave Dykstra from Fermi National Laboratory has offered to lead the project's security team.
 
-Thank you Dave!
+We are very grateful for Dave's involvement in this role (and others in the project). Thank you Dave!
 
 ## The Official Singularity Project
 Nomcenclature is important! This is the official Singularity project. Forks that retain the same name can cause confusion as versions, security implications, updates, and even meetings may get confusing.
 
-Sylabs™ is retaining "Singularity" as a base product name, but they have added suffixes to differentiate themselves.
-
-Please pay attention to project nomenclature to ensure you are using the official Singularity project.
+To that point, Sylabs™ is retaining "Singularity" as a base product name, but they have added suffixes to differentiate themselves (e.g. *PRO and *CE). This will help to avoid confusion, but please always note the project nomenclature to ensure you are using the official Singularity project.
 
 ## HPCng Community
 HPCng (the Next Generation of High Performance Computing), a community led by people from organizations like:
