@@ -92,7 +92,8 @@ const HelpPage = () => (
           </Link>
         </div>
       </div>
-
+      </div>
+    <div className="bg-gray-100 py-10">
       <div className="max-w-2xl mb-10 mt-20 md:mx-auto sm:text-center lg:max-w-3xl md:mb-12">
         <h2 className="max-w-xl mb-6 font-sans text-4xl font-extrabold leading-none tracking-tight text-gray-900 sm:text-5xl md:mx-auto">
           Commercial Support
@@ -109,14 +110,13 @@ const HelpPage = () => (
         </p>
 
         <Link
-          to="https://ctrliq.com/singularity"
-          class="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-blue-900 hover:bg-blue-800 focus:shadow-outline focus:outline-none"
-          aria-label="Singularity Support"
-          title="Singularity Support"
+            to="https://ctrliq.com/singularity"
+            class="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-blue-900 hover:bg-blue-800 focus:shadow-outline focus:outline-none"
+            aria-label="Singularity Support"
+            title="Singularity Support"
         >
           Get Support
         </Link>
-
       </div>
     </div>
   </Layout>

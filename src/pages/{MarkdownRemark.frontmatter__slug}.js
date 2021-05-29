@@ -20,7 +20,7 @@ export default function Template({
                 <div className="max-w-xl mb-5 md:mx-auto lg:max-w-2xl">
                     <div className="mb-10 sm:text-center">
                         <h1
-                            className="inline-block max-w-lg font-sans text-3xl font-extrabold leading-none tracking-tight text-black sm:text-4xl"
+                            className="inline-block max-w-xl font-sans text-3xl font-extrabold leading-none tracking-tight text-black sm:text-4xl"
                         >
                             {frontmatter.title}
                         </h1>
