@@ -133,8 +133,6 @@ const IndexPage = () => (
               </p>
             </div>
           </div>
-
-
           <div className="flex mt-5 mb-5 flex-col bg-white rounded-2xl shadow-xl border border-gray-200">
             <div className="flex-1 relative pt-16 px-6 pb-8 md:px-8">
               <div className="absolute top-0 p-5 inline-block bg-blue-900 rounded-xl shadow-lg transform -translate-y-1/2">
@@ -148,23 +146,15 @@ const IndexPage = () => (
               </p>
             </div>
           </div>
-
-
         </div>
         <div className="md:mx-auto sm:text-center lg:max-w-2xl">
           <iframe width="100%" height="400" src="https://www.youtube-nocookie.com/embed/UbxCwcreJqU?controls=1&&amp;rel=0" title="YouTube video player" frameborder="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           <p className="mt-4 text-base text-gray-500">
             Singularity video tutorial, recorded by Ian Kanesherio @ CIQ.
           </p>
-
         </div>
-
-
       </div>
-
-
       <div className="relative px-4 mb-10 sm:px-0 bg-gray-100 pb-10">
-
         <div className="px-4 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
           <div className="px-4 py-8 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-10">
             <div className="max-w-xl md:mx-auto sm:text-center lg:max-w-2xl">
@@ -173,13 +163,9 @@ const IndexPage = () => (
               </h3>
             </div>
           </div>
-
-
           <div className="grid gap-8 row-gap-5 lg:grid-cols-3">
-
             {features.map((feature) => (
               <div key={feature.name}>
-
                 <div className="relative p-px overflow-hidden transition duration-300 transform border rounded shadow-sm hover:scale-105 group hover:shadow-xl">
                   <div className="absolute bottom-0 left-0 w-full h-1 duration-300 origin-left transform scale-x-0 bg-blue-900 group-hover:scale-x-100" />
                   <div className="absolute bottom-0 left-0 w-1 h-full duration-300 origin-bottom transform scale-y-0 bg-blue-900 group-hover:scale-y-100" />
