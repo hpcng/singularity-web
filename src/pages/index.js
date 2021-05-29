@@ -11,50 +11,48 @@ const features = [
   {
     name: 'Absolute Trust and Security',
     description:
-      'Singularity is the only container system that supports public/private key signing providing trust and guarantees of immutability.',
+      'Singularity is the only container system that supports public/private key signing, providing trust and guarantees of immutability.',
   },
   {
     name: 'Compatibility',
     description:
-      'Singularity is 100% OCI (Open Contianers Initiative) and Docker compatible.',
+      'Singularity is 100% Docker and OCI (Open Containers Initiative) compatible (but easier to use).',
   },
   {
     name: 'Encrypted',
     description:
-      'Singularity containers can be encrypted and are never decrypted to storage.',
+      'Singularity can encrypt containers and integrates with Vault and other secret management platforms to secure applications, models, and data.',
   },
   {
     name: 'Absolute Portability',
     description:
-      'The single file SIF container format allows you to reproducibly run, share, and archive your workload from workstations, to HPC, to the edge.',
+      'The single-file SIF container format allows you to reproducibly build, share, and archive your workload from workstations, to HPC, to the edge.',
   },
-
   {
     name: 'Secure',
     description:
-      'Singularity runs "rootless" and prohibits privilege escalation from within the container, users are the same inside and outside of the container.',
+      'Singularity runs "rootless" and prohibits privilege escalation within the container; users are the same inside and outside the container.',
   },
   {
     name: 'Integration over isolation',
     description:
-      'With an optimal security model, you can securely leverage GPUs, FPGAs, high speed networks, and filesystems.',
+      'Singularity\'s security architecture allows you to securely leverage GPUs, FPGAs, high-speed networks, and filesystems.',
   },
   {
     name: 'Easy to Use',
     description:
-      'Singularity intuitively allows non-privileged users to run any contained application.',
+      'Singularity intuitively allows non-privileged users to run any containerized application.',
   },
   {
     name: 'Community',
     description:
-      'Singularity is by far, the most utilized container system for performance intensive computing!',
+      'Singularity is by far the most utilized container system for performance-intensive computing!',
   },
   {
     name: 'Support',
     description:
-      'In addition to an active community for support, the official Singularity project is also commercially supported by CIQ.',
+      'Commercial support for Singularity is officially provided by CIQ.',
   },
-
 ]
 
 
@@ -73,7 +71,7 @@ const IndexPage = () => (
               THE CONTAINER SYSTEM FOR PERFORMANCE AND SECURITY
             </h3>
             <p className="text-base mb-10 text-gray-700 md:text-lg">
-              Singularity is the most widely used container system for HPC because it is designed to execute applications at bare metal performance while being secure, portable, and 100% reproducible. Singularity is an open-source project, with a friendly community of developers and users. The user base continues to expand, with Singularity now used across industry and academia in many areas of work.
+              Singularity is the most widely used container system for HPC. It is designed to execute applications at bare-metal performance while being secure, portable, and 100% reproducible. Singularity is an open-source project with a friendly community of developers and users. The user base continues to expand, with Singularity now used across industry and academia in many areas of work.
             </p>
           </div>
 
@@ -104,6 +102,7 @@ const IndexPage = () => (
             </h3>
           </div>
         </div>
+
         <div className="grid mt-10 mb-10 grid-cols-1 gap-y-20 lg:grid-cols-3 lg:gap-y-0 lg:gap-x-8">
           <div className="flex mt-5 mb-5 flex-col bg-white rounded-2xl shadow-xl border border-gray-200">
             <div className="flex-1 relative pt-16 px-6 pb-8 md:px-8">
@@ -113,13 +112,11 @@ const IndexPage = () => (
               <h3 className="text-xl font-medium text-gray-900">
                 ENCAPSULATE
               </h3>
-              <p className="mt-4 text-base text-gray-600">
-                Create a new container including any application(s) or use an existing OCI/Docker container and secure it cryptographically to guarantee it's contents.
+              <p className="mt-4 text-base text-gray-700">
+                Create a new container including any application(s) or use an existing OCI/Docker container and secure it cryptographically to guarantee its contents.
               </p>
             </div>
           </div>
-
-
           <div className="flex mt-5 mb-5 flex-col bg-white rounded-2xl shadow-xl border border-gray-200">
             <div className="flex-1 relative pt-16 px-6 pb-8 md:px-8">
               <div className="absolute top-0 p-5 inline-block bg-blue-900 rounded-xl shadow-lg transform -translate-y-1/2">
@@ -128,8 +125,8 @@ const IndexPage = () => (
               <h3 className="text-xl font-medium text-gray-900">
                 PROLIFERATE
               </h3>
-              <p className="mt-4 text-base text-gray-600">
-                Copy or share your containers anywhere and to anyone using any transport, securely.
+              <p className="mt-4 text-base text-gray-700">
+                Securely share containers with others via container registeries, object stores, HTTP services, or shared storage.
               </p>
             </div>
           </div>
@@ -141,8 +138,8 @@ const IndexPage = () => (
               <h3 className="text-xl font-medium text-gray-900">
                 ORCHESTRATE
               </h3>
-              <p className="mt-4 text-base text-gray-600">
-                Run your workload with 100% confidence that it is secure, trusted, and immutable.
+              <p className="mt-4 text-base text-gray-700">
+                Run your workload with absolute confidence that it is secure, trusted, and immutable.
               </p>
             </div>
           </div>
@@ -154,6 +151,7 @@ const IndexPage = () => (
           </p>
         </div>
       </div>
+
       <div className="relative px-4 mb-10 sm:px-0 bg-gray-100 pb-10">
         <div className="px-4 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
           <div className="px-4 py-8 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-10">

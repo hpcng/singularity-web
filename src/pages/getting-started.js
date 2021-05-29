@@ -8,18 +8,18 @@ import Seo from "../components/seo"
 
 const gettingStartedLinks = [
     {
-        name: 'Download Source Code',
-        href: 'https://github.com/hpcng/singularity/releases',
+        name: 'GitHub Project',
+        href: 'https://github.com/hpcng/singularity',
         description:
-            'Grab the latest stable release of Singularity from the official GitHub repository.',
+            'Grab the latest stable release of Singularity, submit issues, and contribute to the project at the official GitHub repository.',
         icon: DownloadIcon,
-        button: 'Build'
+        button: 'GitHub'
     },
     {
         name: 'Quick Start Guide',
         href: 'https://singularity.hpcng.org/user-docs/master/quick_start.html',
         description:
-            'Check out the quick start documentation to get setup for deployment in a hurry.',
+            'Check out the quick start documentation to get Singularity installed and set up in a hurry.',
         icon: NewspaperIcon,
         button: 'Get Started'
     },
@@ -27,9 +27,9 @@ const gettingStartedLinks = [
         name: 'Supported Binary Packages',
         href: 'https://repo.ctrliq.com',
         description:
-            'Supported Singularity package releases can be found at CIQ\'s repo.',
+            'CIQ is gratiously providing binary packages for non-production use; you can also find them in EPEL for RHEL dervitives.',
         icon: SupportIcon,
-        button: 'Install'
+        button: 'Repos'
     },
 ]
 
@@ -62,7 +62,7 @@ const GettingStartedPage = () => (
                                     <link.icon className="h-6 w-6 text-white" aria-hidden="true" />
                                 </div>
                                 <h3 className="text-xl font-medium text-gray-900">{link.name}</h3>
-                                <p className="mt-4 text-base text-gray-500">{link.description}</p>
+                                <p className="mt-4 text-base text-gray-700">{link.description}</p>
                             </div>
                             <div className="p-6 bg-gray-50 rounded-bl-2xl rounded-br-2xl md:px-8">
                                 <Link to={link.href} className="text-base font-medium text-blue-900 hover:text-blue-700">
