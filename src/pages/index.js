@@ -92,24 +92,19 @@ const IndexPage = () => (
               Need help?
             </Link>
           </div>
-
-
-
         </div>
       </div>
 
 
-      <div className="px-4 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 py-10">
-        <div className="px-4 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-10">
+      <div className="px-4 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 py-20">
+        <div className="px-4 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:pb-10">
           <div className="max-w-xl md:mx-auto sm:text-center lg:max-w-2xl">
             <h3 className="max-w-xl font-sans text-4xl font-extrabold leading-none tracking-tight text-gray-900 sm:text-5xl md:mx-auto">
               Overview
-              </h3>
+            </h3>
           </div>
         </div>
-
-
-        <div className="grid mt-10 mb-5 grid-cols-1 gap-y-20 lg:grid-cols-3 lg:gap-y-0 lg:gap-x-8">
+        <div className="grid mt-10 mb-10 grid-cols-1 gap-y-20 lg:grid-cols-3 lg:gap-y-0 lg:gap-x-8">
           <div className="flex mt-5 mb-5 flex-col bg-white rounded-2xl shadow-xl border border-gray-200">
             <div className="flex-1 relative pt-16 px-6 pb-8 md:px-8">
               <div className="absolute top-0 p-5 inline-block bg-blue-900 rounded-xl shadow-lg transform -translate-y-1/2">
@@ -168,7 +163,7 @@ const IndexPage = () => (
       </div>
 
 
-      <div className="relative px-4 mb-10 sm:px-0 bg-gray-100">
+      <div className="relative px-4 mb-10 sm:px-0 bg-gray-100 pb-10">
 
         <div className="px-4 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
           <div className="px-4 py-8 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-10">
