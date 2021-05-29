@@ -25,6 +25,16 @@ const Header = ({ siteTitle }) => {
           <ul className="flex items-center hidden space-x-8 lg:flex">
             <li>
               <Link
+                  to="/features"
+                  aria-label="Features"
+                  title="Features"
+                  className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-blue-900"
+              >
+                Features
+              </Link>
+            </li>
+            <li>
+              <Link
                 to="/docs"
                 aria-label="Documentation"
                 title="Documentation"
@@ -121,7 +131,7 @@ const Header = ({ siteTitle }) => {
             </svg>
           </button>
           {isMenuOpen && (
-              <div className="absolute top-0 left-0 w-full">
+              <div className="absolute top-0 left-0 w-full z-20">
                 <div className="p-5 bg-white border rounded shadow-sm">
                   <div className="flex items-center justify-between mb-4">
                     <div>
@@ -155,6 +165,16 @@ const Header = ({ siteTitle }) => {
                   </div>
                   <nav>
                     <ul className="space-y-4">
+                      <li>
+                        <Link
+                            to="/features"
+                            aria-label="Features"
+                            title="Features"
+                            className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-blue-900"
+                        >
+                          Features
+                        </Link>
+                      </li>
                       <li>
                         <Link
                             to="/docs"
