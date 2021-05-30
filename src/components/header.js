@@ -157,16 +157,6 @@ const Header = ({ siteTitle }) => {
                   <ul className="space-y-4">
                     <li>
                       <Link
-                        to="/features"
-                        aria-label="Features"
-                        title="Features"
-                        className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-blue-900"
-                      >
-                        Features
-                        </Link>
-                    </li>
-                    <li>
-                      <Link
                         to="/docs"
                         aria-label="Documentation"
                         title="Documentation"
