@@ -93,8 +93,8 @@ const HelpPage = () => (
         </div>
       </div>
     </div>
-    <div className="bg-gray-100 py-10">
-      <div className="max-w-2xl mb-10 mt-20 md:mx-auto sm:text-center lg:max-w-3xl md:mb-12">
+    <div className="px-4 bg-gray-100 py-10">
+      <div className="max-w-2xl mb-10 mt-20 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
         <h2 className="max-w-xl mb-6 font-sans text-4xl font-extrabold leading-none tracking-tight text-gray-900 sm:text-5xl md:mx-auto">
           Commercial Support
         </h2>
