@@ -68,7 +68,7 @@ const IndexPage = () => (
                 Singularity
               </h2>
             <h3 className="text-base text-gray-800 md:text-lg mb-10 font-semibold">
-              THE CONTAINER SYSTEM FOR PERFORMANCE AND SECURITY
+              THE CONTAINER SYSTEM FOR HIGH PERFORMANCE COMPUTING AND SECURITY
             </h3>
             <p className="text-base mb-10 text-gray-700 md:text-lg">
               Singularity is the most widely used container system for HPC. It is designed to execute applications at bare-metal performance while being secure, portable, and 100% reproducible. Singularity is an open-source project with a friendly community of developers and users. The user base continues to expand, with Singularity now used across industry and academia in many areas of work.
