@@ -110,7 +110,7 @@ const IndexPage = () => (
                 <LockClosedIcon className="h-6 w-6 text-white" aria-hidden="true" />
               </div>
               <h3 className="text-xl font-medium text-gray-900">
-                ENCAPSULATE
+                SECURE
               </h3>
               <p className="mt-4 text-base text-gray-700">
                 Create a new container including any application(s) or use an existing OCI/Docker container and secure it cryptographically to guarantee its contents.
@@ -123,10 +123,10 @@ const IndexPage = () => (
                 <ArrowsExpandIcon className="h-6 w-6 text-white" aria-hidden="true" />
               </div>
               <h3 className="text-xl font-medium text-gray-900">
-                PROLIFERATE
+                DISTRIBUTE
               </h3>
               <p className="mt-4 text-base text-gray-700">
-                Securely share containers with others via container registeries, object stores, HTTP services, or shared storage.
+                Securely archive, distribute, share containers with others via container registeries, object stores, HTTP services, or shared storage.
               </p>
             </div>
           </div>
@@ -136,10 +136,10 @@ const IndexPage = () => (
                 <BadgeCheckIcon className="h-6 w-6 text-white" aria-hidden="true" />
               </div>
               <h3 className="text-xl font-medium text-gray-900">
-                ORCHESTRATE
+                RUN
               </h3>
               <p className="mt-4 text-base text-gray-700">
-                Run your workload with absolute confidence that it is secure, trusted, and immutable.
+                Run workloads with the absolute guarantee of where the container came from and that it has not been tampered with or changed.
               </p>
             </div>
           </div>
