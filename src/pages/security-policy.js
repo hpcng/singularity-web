@@ -28,12 +28,12 @@ const SecurityPolicy = () => (
           </p>
 
           <p>
-              If you believe <strong>you have discovered a vulnerability</strong> in Singularity, let us know so we can research it! You can notify our team by email at <a href="mailto:singularity-security@hpcng.org">singularity-security@hpcng.org</a>.
+              If you believe <strong>you have discovered a vulnerability</strong> in Singularity, let us know so we can research it! You can notify our team by email at <a href="mailto:singularity-security@hpcng.org">singularity&#8209;security@hpcng.org</a>.
           </p>
           <p>
               We encourage people who contact the Singularity Security team to use email encryption. <a href="singularity-security.pub">Get our PGP public key</a> and verify the fingerprint:
           </p>
-          <p>singularity-security@hpcng.org pgp fingerprint here</p>
+          <p>F642 B2B2 5989 AA44 D987  225C 6F21 6032 31A3 462A</p>
           <h3><b>The goals of a standardized security response procedure</b></h3>
           <p>
             Before we cover the procedure that the Singularity Security team takes to mitigate newly discovered vulnerabilities, let's talk about the goals we're trying to achieve. 
@@ -109,9 +109,9 @@ const SecurityPolicy = () => (
                   take days.)
               </li>
               <li>
-                  Once patch(es) are developed and fully tested, they are pushed to a
-                  <a href="https://docs.github.com/en/code-security/security-advisories/about-github-security-advisories"> GitHub Security Advisory </a>
-                  which keeps them hidden until ready for public disclosure.
+                  Once patch(es) are developed and fully tested, they are pushed to a&nbsp;
+                  <a href="https://docs.github.com/en/code-security/security-advisories/about-github-security-advisories">GitHub Security Advisory</a>
+                  &nbsp;which keeps them hidden until ready for public disclosure.
               </li>
               <li>
                   The GitHub Security Advisory is shared with HPCng partners that distribute binary versions of Singularity.
@@ -130,8 +130,8 @@ const SecurityPolicy = () => (
               <li>
                   After a reasonable period of time has elapsed and stakeholders
                   have likely upgraded (and on a Tuesday where possible as
-                  several administrators have 
-                  <a href="https://groups.google.com/a/lbl.gov/forum/#!topic/singularity/FgHj7WhqIE8"> suggested</a>),
+                  several administrators have&nbsp;
+                  <a href="https://groups.google.com/a/lbl.gov/forum/#!topic/singularity/FgHj7WhqIE8">suggested</a>),
                   the patches will be merged from the private development space into the
                   public repository and a release will immediately be made. The
                   release notes will do the following:
