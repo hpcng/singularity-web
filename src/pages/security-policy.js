@@ -31,7 +31,7 @@ const SecurityPolicy = () => (
               If you believe <strong>you have discovered a vulnerability</strong> in Singularity, let us know so we can research it! You can notify our team by email at <a href="mailto:singularity-security@hpcng.org">singularity&#8209;security@hpcng.org</a>.
           </p>
           <p>
-              We encourage people who contact the Singularity Security team to use email encryption. <a href="singularity-security.pub">Get our PGP public key</a> and verify the fingerprint:
+              We encourage people who contact the Singularity Security team to use email encryption. <a href="/singularity-security.pub">Get our PGP public key</a> and verify the fingerprint:
           </p>
           <p>F642 B2B2 5989 AA44 D987  225C 6F21 6032 31A3 462A</p>
           <h3><b>The goals of a standardized security response procedure</b></h3>
