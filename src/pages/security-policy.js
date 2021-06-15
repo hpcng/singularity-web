@@ -73,7 +73,7 @@ const SecurityPolicy = () => (
                   <strong><b>Enable stakeholders over malicious actors: </b></strong>
                   When a new vulnerability is publicly announced, a race begins between
                   system administrators and those with nefarious intent. HPCng
-                  partners that distribute Singularity only in binary form are provided security patches prior to security
+                  collaborators that distribute Singularity only in binary form are provided security patches prior to security
                   announcements.  They then distribute patched binaries to their stakeholders as a head start in the security race. Although
                   patched binaries are made available to Singularity stakeholders first, they
                   are provided without releasing security-related information.
@@ -114,16 +114,16 @@ const SecurityPolicy = () => (
                   &nbsp;which keeps them hidden until ready for public disclosure.
               </li>
               <li>
-                  The GitHub Security Advisory is shared with HPCng partners that distribute binary versions of Singularity.
+                  The GitHub Security Advisory is shared with HPCng collaborators that distribute binary versions of Singularity.
               </li>
               <li>
-                  The HPCng partners then prepare their binaries and notify their stakeholders only with a standard notification that
+                  The HPCng collaborators then prepare their binaries and notify their stakeholders only with a standard notification that
                   there is a new binary and they should
                   upgrade. This notice will NOT contain any sensitive information
                   and will NOT disclose the presence of a security-related patch.
               </li>
               <li>
-                  The stakeholders of HPCng partners are given a reasonable amount of time to
+                  The stakeholders of HPCng collaborators are given a reasonable amount of time to
                   upgrade their installations so that when details of the exploit are
                   revealed they are already protected.
               </li>
