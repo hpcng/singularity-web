@@ -218,7 +218,7 @@ These measures allow users to interact with the host system from within the cont
 </div>
 <div class="section" id="singularity-image-format-sif">
 <h2>Singularity Image Format (SIF)<a class="headerlink" href="#singularity-image-format-sif" title="Permalink to this headline">¶</a></h2>
-<p>Sylabs addresses container security as a continuous process. It attempts to provide container integrity throughout the distribution
+<p>The Singularity community addresses container security as a continuous process. It attempts to provide container integrity throughout the distribution
 pipeline.. i.e., at rest, in transit and while running. Hence, the SIF has been designed to achieve these goals.</p>
 <p>A SIF file is an immutable container runtime image. It is a physical representation of the container environment itself. An
 important component of SIF that elicits security feature is the ability to cryptographically sign a container, creating a signature
@@ -279,9 +279,9 @@ RAM may be unusable on systems with &lt;1GiB of free RAM.</p>
 <div class="section" id="admin-configurable-files">
 <h2>Admin Configurable Files<a class="headerlink" href="#admin-configurable-files" title="Permalink to this headline">¶</a></h2>
 <p>Singularity Administrators have the ability to access various configuration files, that will let them set security
-restrictions, grant or revoke a user’s capabilities, manage resources and authorize containers etc. One such file interesting in this context is <a class="reference external" href="https://sylabs.io/guides/3.7/admin-guide/configfiles.html#ecl-toml">ecl.toml</a>
+restrictions, grant or revoke a user’s capabilities, manage resources and authorize containers etc. One such file interesting in this context is <a class="reference external" href="https://singularity.hpcng.org/admin-docs/master/configfiles.html#ecl-toml">ecl.toml</a>
 which allows blacklisting and whitelisting of containers. You can find all the configuration files and their parameters
-documented <a class="reference external" href="https://sylabs.io/guides/3.7/admin-guide/configfiles.html">here</a>.</p>
+documented <a class="reference external" href="https://singularity.hpcng.org/admin-docs/3.7/configfiles.html">here</a>.</p>
 <div class="section" id="cgroups-support">
 <h3>cgroups support<a class="headerlink" href="#cgroups-support" title="Permalink to this headline">¶</a></h3>
 <p>Starting v3.0, Singularity added native support for <code class="docutils literal notranslate"><span class="pre">cgroups</span></code>, allowing users to limit the resources their containers consume
@@ -289,13 +289,13 @@ without the help of a separate program like a batch scheduling system. This feat
 container seizes control of all available system resources in order to stop other containers from operating properly.
 To utilize this feature, a user first creates a configuration file. An example configuration file is installed by default with
 Singularity to provide a guide. At runtime, the <code class="docutils literal notranslate"><span class="pre">--apply-cgroups</span></code> option is used to specify the location of the configuration
-file and cgroups are configured accordingly. More about cgroups support <a class="reference external" href="https://sylabs.io/guides/3.7/admin-guide/configfiles.html#cgroups-toml">here</a>.</p>
+file and cgroups are configured accordingly. More about cgroups support <a class="reference external" href="https://singularity.hpcng.org/admin-docs/3.7/configfiles.html#cgroups-toml">here</a>.</p>
 </div>
 <div class="section" id="security-options">
 <h3><code class="docutils literal notranslate"><span class="pre">--security</span></code> options<a class="headerlink" href="#security-options" title="Permalink to this headline">¶</a></h3>
 <p>Singularity supports a number of methods for specifying the security scope and context when running Singularity containers.
 Additionally, it supports new flags that can be passed to the action commands; <code class="docutils literal notranslate"><span class="pre">shell</span></code>, <code class="docutils literal notranslate"><span class="pre">exec</span></code>, and <code class="docutils literal notranslate"><span class="pre">run</span></code> allowing fine
-grained control of security. Details about them are documented <a class="reference external" href="https://sylabs.io/guides/3.7/user-guide/security_options.html">here</a>.</p>
+grained control of security. Details about them are documented <a class="reference external" href="https://singularity.hpcng.org/admin-docs/3.7/security_options.html">here</a>.</p>
 </div>
 </div>
 <div class="section" id="security-in-scs">
@@ -349,7 +349,7 @@ updates so, when a CVE is announced publicly PRO subscribers are already using p
 <p>Security is not a check box that one can tick and forget.  It’s an ongoing process that begins with software architecture, and
 continues all the way through to ongoing security practices.  In addition to ensuring that containers are run without elevated
 privileges where appropriate, and that containers are produced by trusted sources, users must monitor their containers for newly
-discovered vulnerabilities and update when necessary just as they would with any other software. Sylabs is constantly probing to
+discovered vulnerabilities and update when necessary just as they would with any other software. The Singularity community is constantly probing to
 find and patch vulnerabilities within Singularity, and will continue to do so.</p>
 </div>
 </div>
