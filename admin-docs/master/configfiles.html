@@ -262,7 +262,7 @@ when running a container by default. Options include:</p>
 <p class="admonition-title">Note</p>
 <p>The root user can manage the capabilities granted to individual containers when they
 are launched through the <code class="docutils literal notranslate"><span class="pre">--add-caps</span></code> and <code class="docutils literal notranslate"><span class="pre">drop-caps</span></code> flags.
-Please see <a class="reference external" href="https://singularity.hpcng.org/user-docs/3.7/security_options.html#linux-capabilities">Linux Capabilities</a>
+Please see <a class="reference external" href="https://singularity.hpcng.org/user-docs/3.8/security_options.html#linux-capabilities">Linux Capabilities</a>
 in the user guide for more information.</p>
 </div>
 </div>
@@ -440,7 +440,7 @@ contents.</p>
 <div class="section" id="networking-options">
 <h3>Networking Options<a class="headerlink" href="#networking-options" title="Permalink to this headline">¶</a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">--network</span></code> option can be used to specify a CNI networking
-configuration that will be used when running a container with <a class="reference external" href="https://singularity.hpcng.org/user-docs/3.7/networking.html">network
+configuration that will be used when running a container with <a class="reference external" href="https://singularity.hpcng.org/user-docs/3.8/networking.html">network
 virtualization</a>. Unrestricted
 use of CNI network configurations requires root privilege, as certain
 configurations may disrupt the host networking environment.</p>
@@ -503,10 +503,10 @@ a wide breadth of features for users. Locations for these tools can be
 customized by system admins and referenced with the options below:</p>
 <p><code class="docutils literal notranslate"><span class="pre">CNI</span> <span class="pre">CONFIGURATION</span> <span class="pre">PATH</span></code>:
 This option allows admins to specify a custom path for the CNI configuration
-that Singularity will use for <a class="reference external" href="https://singularity.hpcng.org/user-docs/3.7/networking.html">Network Virtualization</a>.</p>
+that Singularity will use for <a class="reference external" href="https://singularity.hpcng.org/user-docs/3.8/networking.html">Network Virtualization</a>.</p>
 <p><code class="docutils literal notranslate"><span class="pre">CNI</span> <span class="pre">PLUGIN</span> <span class="pre">PATH</span></code>:
 This option allows admins to specify a custom path for Singularity to access
-CNI plugin executables. Check out the <a class="reference external" href="https://singularity.hpcng.org/user-docs/3.7/networking.html">Network Virtualization</a>
+CNI plugin executables. Check out the <a class="reference external" href="https://singularity.hpcng.org/user-docs/3.8/networking.html">Network Virtualization</a>
 section of the user guide for more information.</p>
 <p><code class="docutils literal notranslate"><span class="pre">MKSQUASHFS</span> <span class="pre">PATH</span></code>:
 This allows an admin to specify the location of <code class="docutils literal notranslate"><span class="pre">mksquashfs</span></code> if it is not
@@ -773,7 +773,7 @@ to restrict the in-container device tree.</p>
 host drivers/libraries is dependent on the versions of the GPU compute
 frameworks that were used to build the applications. Compatibility and
 usage information is discussed in the <cite>GPU Support</cite> section of the
-<a class="reference external" href="https://singularity.hpcng.org/user-docs/3.7">user guide</a></p>
+<a class="reference external" href="https://singularity.hpcng.org/user-docs/3.8">user guide</a></p>
 <div class="section" id="nvidia-gpus-cuda">
 <h3>NVIDIA GPUs / CUDA<a class="headerlink" href="#nvidia-gpus-cuda" title="Permalink to this headline">¶</a></h3>
 <p>If the <a class="reference external" href="https://github.com/NVIDIA/libnvidia-container">nvidia-container-cli</a> tool is installed on
@@ -913,8 +913,8 @@ system calls if the user has the associated capability.</p>
 </pre></div>
 </div>
 <p>For more insight into security options, network options, cgroups, capabilities,
-etc, please check the <a class="reference external" href="https://singularity.hpcng.org/user-docs/3.7">Userdocs</a>
-and it’s <a class="reference external" href="https://singularity.hpcng.org/user-docs/3.7/appendix.html">Appendix</a>.</p>
+etc, please check the <a class="reference external" href="https://singularity.hpcng.org/user-docs/3.8">Userdocs</a>
+and it’s <a class="reference external" href="https://singularity.hpcng.org/user-docs/3.8/appendix.html">Appendix</a>.</p>
 </div>
 <div class="section" id="remote-yaml">
 <h2>remote.yaml<a class="headerlink" href="#remote-yaml" title="Permalink to this headline">¶</a></h2>
@@ -975,7 +975,7 @@ https://keys.example.com  YES     NO        1*
 </pre></div>
 </div>
 <p>For more details on the <code class="docutils literal notranslate"><span class="pre">remote</span></code> command group and managing remote endpoints,
-please check the <a class="reference external" href="https://singularity.hpcng.org/user-docs/3.7/endpoint.html">Remote Userdocs</a>.</p>
+please check the <a class="reference external" href="https://singularity.hpcng.org/user-docs/3.8/endpoint.html">Remote Userdocs</a>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Once users login to a system wide endpoint, a copy of the endpoint will be listed in
@@ -992,7 +992,7 @@ service endpoint. This behavior can be changed or supplemented via the
 administrator to create a global list of key servers used to verify container
 signatures by default.</p>
 <p>For more details on the <code class="docutils literal notranslate"><span class="pre">remote</span></code> command group and managing keyservers,
-please check the <a class="reference external" href="https://singularity.hpcng.org/user-docs/3.7/endpoint.html">Remote Userdocs</a>.</p>
+please check the <a class="reference external" href="https://singularity.hpcng.org/user-docs/3.8/endpoint.html">Remote Userdocs</a>.</p>
 </div>
 </div>
 </div>
