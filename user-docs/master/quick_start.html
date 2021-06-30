@@ -496,8 +496,8 @@ Found 22 container images for amd64 matching &quot;tensorflow&quot;:
     ...
 </pre></div>
 </div>
-<p>You can use the <a class="reference external" href="https://www.singularity.hpcng.org/user-docs/3.7/cli/singularity_pull.html">pull</a>
-and <a class="reference external" href="https://www.singularity.hpcng.org/user-docs/3.7/cli/singularity_build.html">build</a>
+<p>You can use the <a class="reference external" href="cli/singularity_pull.html">pull</a>
+and <a class="reference external" href="cli/singularity_build.html">build</a>
 commands to download pre-built images from an external resource like the
 <a class="reference external" href="https://cloud.sylabs.io/library">Container Library</a> or
 <a class="reference external" href="https://hub.docker.com/">Docker Hub</a>.</p>
@@ -546,7 +546,7 @@ from the Container Library:</p>
 </div>
 <div class="section" id="shell">
 <h3>Shell<a class="headerlink" href="#shell" title="Permalink to this headline">¶</a></h3>
-<p>The <a class="reference external" href="https://www.singularity.hpcng.org/user-docs/3.7/cli/singularity_shell.html">shell</a>
+<p>The <a class="reference external" href="cli/singularity_shell.html">shell</a>
 command allows you to spawn a new shell within your container and interact with
 it as though it were a small virtual machine.</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ singularity shell lolcow_latest.sif
@@ -574,7 +574,7 @@ exited.</p>
 </div>
 <div class="section" id="executing-commands">
 <h3>Executing Commands<a class="headerlink" href="#executing-commands" title="Permalink to this headline">¶</a></h3>
-<p>The <a class="reference external" href="https://www.singularity.hpcng.org/user-docs/3.7/cli/singularity_exec.html">exec</a>
+<p>The <a class="reference external" href="cli/singularity_exec.html">exec</a>
 command allows you to execute a custom command within a container by specifying
 the image file. For instance, to execute the <code class="docutils literal notranslate"><span class="pre">cowsay</span></code> program within the
 <code class="docutils literal notranslate"><span class="pre">lolcow_latest.sif</span></code> container:</p>
@@ -608,7 +608,7 @@ disappears.</p>
 <span id="runcontainer"></span><h3>Running a container<a class="headerlink" href="#running-a-container" title="Permalink to this headline">¶</a></h3>
 <p>Singularity containers contain <a class="reference internal" href="definition_files.html#runscript"><span class="std std-ref">runscripts</span></a>. These are user
 defined scripts that define the actions a container should perform when someone
-runs it. The runscript can be triggered with the <a class="reference external" href="https://www.singularity.hpcng.org/user-docs/3.7/cli/singularity_run.html">run</a>
+runs it. The runscript can be triggered with the <a class="reference external" href="cli/singularity_run.html">run</a>
 command, or simply by calling the container as though it were an executable.</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ singularity run lolcow_latest.sif
  _____________________________________
@@ -780,8 +780,7 @@ use an existing container on your host system as a base.</p>
 access on your build system, you can build images using the <a class="reference external" href="https://cloud.sylabs.io/builder">Remote Builder</a>.</p>
 <p>This quickstart document just scratches the surface of all of the things you can
 do with Singularity!</p>
-<p>If you need additional help or support, contact the Sylabs team:
-<a class="reference external" href="https://www.sylabs.io/contact/">https://www.sylabs.io/contact/</a></p>
+<p>If you need additional help or support, see <a class="reference external" href="https://singularity.hpcng.org/help">https://singularity.hpcng.org/help</a>.</p>
 <div class="section" id="singularity-on-a-shared-resource">
 <span id="installation-request"></span><h4>Singularity on a shared resource<a class="headerlink" href="#singularity-on-a-shared-resource" title="Permalink to this headline">¶</a></h4>
 <p>Perhaps you are a user who wants a few talking points and background to share
@@ -793,7 +792,7 @@ to many common questions.</p>
 to this:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Dear shared resource administrator,
 
-We are interested in having Singularity (https://www.sylabs.io/docs/)
+We are interested in having Singularity (https://singularity.hpcng.org)
 installed on our shared resource. Singularity containers will allow us to
 build encapsulated environments, meaning that our work is reproducible and
 we are empowered to choose all dependencies including libraries, operating
@@ -820,16 +819,14 @@ software, and are quick to respond to the needs of the community. To help
 learn more about Singularity, I thought these items might be of interest:
 
     - Security: A discussion of security concerns is discussed at
-    https://www.sylabs.io/guides/{adminversion}/admin-guide/admin_quickstart.html
+    https://singularity.hpcng.org/admin-docs/3.7/admin_quickstart.html
 
     - Installation:
-    https://www.sylabs.io/guides/{adminversion}/admin-guide/installation.html
+    https://singularity.hpcng.org/admin-docs/3.7/installation.html
 
-If you have questions about any of the above, you can email the open source
-list (singularity@lbl.gov), join the open source slack channel
-(singularity-container.slack.com), or contact the organization that supports
-Singularity directly (sylabs.io/contact). I can do
-my best to facilitate this interaction if help is needed.
+If you have questions about any of the above, you can contact one
+of the sources listed at https://singularity.hpcng.org/help.  I can
+do my best to facilitate this interaction if help is needed.
 
 Thank you kindly for considering this request!
 
