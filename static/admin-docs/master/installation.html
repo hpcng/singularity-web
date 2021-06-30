@@ -223,7 +223,7 @@
   <div class="section" id="installing-singularity">
 <span id="installation"></span><h1>Installing Singularity<a class="headerlink" href="#installing-singularity" title="Permalink to this headline">¶</a></h1>
 <p>This section will guide you through the process of installing
-Singularity 3.7.0 via several different methods. (For
+Singularity 3.8.0 via several different methods. (For
 instructions on installing earlier versions of Singularity please see
 <a class="reference external" href="https://singularity.hpcng.org/docs/">earlier versions of the docs</a>.)</p>
 <div class="section" id="installation-on-linux">
@@ -481,7 +481,7 @@ page).</p>
 list, visit <a class="reference external" href="https://github.com/hpcng/singularity/releases">the GitHub release page</a>.  After deciding on
 a release to install, you can run the following commands to proceed
 with the installation.</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ export VERSION=3.7.0 &amp;&amp; # adjust this as necessary \
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ export VERSION=3.8.0 &amp;&amp; # adjust this as necessary \
     wget https://github.com/hpcng/singularity/releases/download/v${VERSION}/singularity-${VERSION}.tar.gz &amp;&amp; \
     tar -xzf singularity-${VERSION}.tar.gz &amp;&amp; \
     cd singularity
@@ -491,7 +491,7 @@ with the installation.</p>
 <div class="section" id="checkout-code-from-git">
 <h4>Checkout Code from Git<a class="headerlink" href="#checkout-code-from-git" title="Permalink to this headline">¶</a></h4>
 <p>The following commands will install Singularity from the <a class="reference external" href="https://github.com/hpcng/singularity">GitHub repo</a> to <code class="docutils literal notranslate"><span class="pre">/usr/local</span></code>. This
-method will work for &gt;=v3.7.0. To install an older
+method will work for &gt;=v3.8.0. To install an older
 tagged release see <a class="reference external" href="https://singularity.hpcng.org/docs/">older versions of the docs</a>.</p>
 <p>When installing from source, you can decide to install from either a
 <strong>tag</strong>, a <strong>release branch</strong>, or from the <strong>master branch</strong>.</p>
@@ -515,7 +515,7 @@ and may be unstable.</p></li>
 appropriate directory use these commands.</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ git clone https://github.com/hpcng/singularity.git &amp;&amp; \
     cd singularity &amp;&amp; \
-    git checkout v3.7.0
+    git checkout v3.8.0
 </pre></div>
 </div>
 </div>
@@ -609,7 +609,7 @@ should be named <cite>singularity-&lt;version&gt;.tar.gz</cite>.</p>
 <p>After installing the <a class="reference internal" href="#install-dependencies"><span class="std std-ref">dependencies</span></a> and
 installing <a class="reference internal" href="#install-go"><span class="std std-ref">Go</span></a> as detailed above, you are ready to
 download the tarball and build and install the RPM.</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ export VERSION=3.7.0 &amp;&amp; # adjust this as necessary \
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ export VERSION=3.8.0 &amp;&amp; # adjust this as necessary \
     wget https://github.com/hpcng/singularity/releases/download/v${VERSION}/singularity-${VERSION}.tar.gz &amp;&amp; \
     rpmbuild -tb singularity-${VERSION}.tar.gz &amp;&amp; \
     sudo rpm -ivh ~/rpmbuild/RPMS/x86_64/singularity-$VERSION-1.el7.x86_64.rpm &amp;&amp; \
@@ -642,7 +642,7 @@ can clone the repository, directly <code class="docutils literal notranslate"><s
 Singularity:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ ./mconfig &amp;&amp; \
 make -C builddir rpm &amp;&amp; \
-sudo rpm -ivh ~/rpmbuild/RPMS/x86_64/singularity-3.7.0.el7.x86_64.rpm # or whatever version you built
+sudo rpm -ivh ~/rpmbuild/RPMS/x86_64/singularity-3.8.0.el7.x86_64.rpm # or whatever version you built
 </pre></div>
 </div>
 <p>To build an rpm with an alternative install prefix set <code class="docutils literal notranslate"><span class="pre">RPMPREFIX</span></code>
@@ -711,7 +711,7 @@ library:</p>
 3.9.2
 </pre></div>
 </div>
-<p>See the <a class="reference external" href="https://singularity.hpcng.org/user-docs/3.7">user guide</a> for more
+<p>See the <a class="reference external" href="https://singularity.hpcng.org/user-docs/3.8">user guide</a> for more
 information about how to use Singularity.</p>
 <div class="section" id="singularity-buildcfg">
 <h4>singularity buildcfg<a class="headerlink" href="#singularity-buildcfg" title="Permalink to this headline">¶</a></h4>
@@ -722,7 +722,7 @@ correctly for your installation, and troubleshoot any ‘not-found’
 errors at runtime.</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ singularity buildcfg
 PACKAGE_NAME=singularity
-PACKAGE_VERSION=3.7.0
+PACKAGE_VERSION=3.8.0
 BUILDDIR=/home/dtrudg/Sylabs/Git/singularity/builddir
 PREFIX=/usr/local
 EXECPREFIX=/usr/local
@@ -851,7 +851,7 @@ different value for the <code class="docutils literal notranslate"><span class="
 </div>
 <p>You can check the installed version of Singularity with the following:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>vagrant@vagrant:~$ singularity version
-3.7.0
+3.8.0
 </pre></div>
 </div>
 <p>Of course, you can also start with a plain OS Vagrant box as a base and then
