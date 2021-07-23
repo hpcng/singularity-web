@@ -15,20 +15,15 @@ const SecurityPolicy = () => (
         </h2>
       </div>
       <div className="prose max-w-full">
-          <h2><strong>Focus on Security</strong></h2>
+          Note: this policy has been adapted from the&nbsp;
+          <a href="https://sylabs.io/security-policy">Sylabs security policy</a>.
+          <h2><strong>Singularity Security</strong></h2>
           <p>
-              We take security very seriously.  Our goal is to provide all Singularity users with the best possible assistance regarding any issue that might affect the security of their systems. </p>
-          <p>
-              Some of the biggest HPC centers on the planet depend on Singularity containers every day to run mission-critical applications. As stewards of the open source Singularity project, HPCng owes it to the community to establish a clear security procedure for the times when vulnerabilities are reported or discovered.
-              HPCng has delegated this responsibility to a few of us from the Singularity community who are collectively known as the Singularity Security team, and this web page documents the security policy we follow.
+              HPCng has delegated the responsibility of managing the security of Singularity to a few of us from the Singularity community who are collectively known as the Singularity Security team, and this web page documents the security policy we follow.
           </p>
           <h3><b>Do you think you found a vulnerability?</b></h3>
           <p>
-              It's easy to assume that your software is secure, but we continuously test the current open source version of Singularity for vulnerabilities.
-          </p>
-
-          <p>
-              If you believe <strong>you have discovered a vulnerability</strong> in Singularity, let us know so we can research it! You can notify our team by email at <a href="mailto:singularity-security@hpcng.org">singularity&#8209;security@hpcng.org</a>.
+              If you believe you have discovered a vulnerability in Singularity, please let us know. You can notify our team by email at <a href="mailto:singularity-security@hpcng.org">singularity&#8209;security@hpcng.org</a>.
           </p>
           <p>
               We encourage people who contact the Singularity Security team to use email encryption. <a href="/singularity-security.pub">Get our PGP public key</a> and verify the fingerprint:
