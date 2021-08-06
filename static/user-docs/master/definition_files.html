@@ -127,7 +127,10 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#multi-stage-builds">Multi-Stage Builds</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#apps">Apps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#scif-apps">SCIF Apps</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#scif-app-sections">SCIF %app* sections</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="#best-practices-for-build-recipes">Best Practices for Build Recipes</a></li>
 </ul>
 </li>
@@ -490,10 +493,8 @@ executed so that they are available during the build and configuration process.<
 <h3>%app*<a class="headerlink" href="#app" title="Permalink to this headline">¶</a></h3>
 <p>In some circumstances, it may be redundant to build different containers for
 each app with nearly equivalent dependencies. Singularity supports installing
-apps within internal modules based on the concept of <a class="reference external" href="https://sci-f.github.io/">Standard Container
-Integration Format (SCI-F)</a>
-All the apps are handled by Singularity at this point. More information on
-Apps <a class="reference internal" href="#apps"><span class="std std-ref">here</span></a>.</p>
+apps within internal modules based on the concept of the <a class="reference external" href="https://sci-f.github.io/">Scientific Filesystem (SCIF)</a>.
+More information on defining and using SCIF Apps <a class="reference internal" href="#apps"><span class="std std-ref">here</span></a>.</p>
 </div>
 <div class="section" id="post">
 <h3>%post<a class="headerlink" href="#post" title="Permalink to this headline">¶</a></h3>
@@ -783,13 +784,27 @@ can only be copied from stages declared before the current stage in the definiti
 E.g., the <code class="docutils literal notranslate"><span class="pre">devel</span></code> stage in the above definition cannot copy files from the
 <code class="docutils literal notranslate"><span class="pre">final</span></code> stage, but the <code class="docutils literal notranslate"><span class="pre">final</span></code> stage can copy files from the <code class="docutils literal notranslate"><span class="pre">devel</span></code> stage.</p>
 </div>
-<div class="section" id="apps">
-<span id="id5"></span><h2>Apps<a class="headerlink" href="#apps" title="Permalink to this headline">¶</a></h2>
-<p>The <code class="docutils literal notranslate"><span class="pre">%app*</span></code> sections can exist alongside any of the primary sections (i.e.
-<code class="docutils literal notranslate"><span class="pre">%post</span></code>, <code class="docutils literal notranslate"><span class="pre">%runscript</span></code>, <code class="docutils literal notranslate"><span class="pre">%environment</span></code>, etc.).  As with the other sections,
-the ordering of the <code class="docutils literal notranslate"><span class="pre">%app*</span></code> sections isn’t important.</p>
+<div class="section" id="scif-apps">
+<span id="apps"></span><h2>SCIF Apps<a class="headerlink" href="#scif-apps" title="Permalink to this headline">¶</a></h2>
+<p>SCIF is a standard for encapsulating multiple apps into a container. A
+container with SCIF apps has multiple entry points, and you can choose
+which to run easily. Each entry point can carry out a different task
+with its own environment, metadata etc., without the need for a
+collection of different containers.</p>
+<p>Singularity implements SCIF, and you can read more about how to use it
+below.</p>
+<p>SCIF is not specfic to Singularity. You can learn more about it at the
+project’s site: <a class="reference external" href="https://sci-f.github.io/">https://sci-f.github.io/</a> which includes extended
+tutorials, the specification, and other information.</p>
+<div class="section" id="scif-app-sections">
+<h3>SCIF %app* sections<a class="headerlink" href="#scif-app-sections" title="Permalink to this headline">¶</a></h3>
+<p>SCIF apps within a Singularity container are created using <code class="docutils literal notranslate"><span class="pre">%app*</span></code>
+sections in a definition file. These <code class="docutils literal notranslate"><span class="pre">%app*</span></code> sections, which will impact the
+way the container runs a specific <code class="docutils literal notranslate"><span class="pre">--app</span></code> can exist alongside any of the
+primary sections (i.e.  <code class="docutils literal notranslate"><span class="pre">%post</span></code>,``%runscript``, <code class="docutils literal notranslate"><span class="pre">%environment</span></code>, etc.).  As
+with the other sections, the ordering of the <code class="docutils literal notranslate"><span class="pre">%app*</span></code> sections isn’t important.</p>
 <p>The following runscript demonstrates how to build 2 different apps into the
-same container using SCI-F modules:</p>
+same container using SCIF modules:</p>
 <div class="highlight-singularity notranslate"><div class="highlight"><pre><span></span><span class="k">Bootstrap</span>: docker
 <span class="k">From</span>: ubuntu
 
@@ -858,6 +873,7 @@ SOFTWARE=foo
 $ singularity exec --app bar my_container.sif env | grep SOFTWARE
 SOFTWARE=bar
 </pre></div>
+</div>
 </div>
 </div>
 <div class="section" id="best-practices-for-build-recipes">

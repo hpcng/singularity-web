@@ -554,12 +554,25 @@ Singularity final.sif:/home/ysub&gt; exit
 </div>
 <div class="section" id="making-it-fancy">
 <h3>Making it Fancy<a class="headerlink" href="#making-it-fancy" title="Permalink to this headline">¶</a></h3>
-<p>Now that we have confirmation that the server is working, let’s make it a little
-cleaner. It’s difficult to remember the exact <code class="docutils literal notranslate"><span class="pre">curl</span></code> command and URL syntax
-each time you want to request a PDF, so let’s automate it. To do that, we can
-use Scientific Filesystem (SCIF) apps, that are integrated
-directly into singularity. If you haven’t already, check out the <a class="reference external" href="https://sci-f.github.io/">Scientific
-Filesystem documentation</a> to come up to speed.</p>
+<p>Now that we have confirmation that the server is working, let’s make
+it a little cleaner. It’s difficult to remember the exact <code class="docutils literal notranslate"><span class="pre">curl</span></code>
+command and URL syntax each time you want to request a PDF, so let’s
+automate it. Instead of creating completely separate containers for
+the server and our streamlined client, it’d be nice to have them both
+available in the same SIF file. To do that, we can use Scientific
+Filesystem (SCIF) apps.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>SCIF is a standard for encapsulating multiple apps into a container. A
+container with SCIF apps has multiple entry points, and you can choose
+which to run easily. Each entry point can carry out a different task
+with it’s own environment, metadata etc., without the need for a
+collection of different containers.</p>
+<p>Singularity implements SCIF, and you can read more about how to use it
+<span class="xref std std-ref">apps</span>.</p>
+<p>SCIF is not specfic to Singularity. You can learn more about it at the
+project site: &lt;<a class="reference external" href="https://sci-f.github.io/">https://sci-f.github.io/</a>&gt;`_.</p>
+</div>
 <p>First off, we’re going to move the installation of the url-to-pdf into an app,
 so that there is a designated spot to place output files. To do that, we want to
 add a section to our definition file to build the server:</p>
