@@ -1,84 +1,41 @@
-
-
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
-  
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
   <title>Build Environment &mdash; Singularity User Guide 3.8 documentation</title>
-  
-
-  
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
-
-  
-  
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
     <link rel="shortcut icon" href="_static/favicon.png"/>
-  
-
-  
-  
-
-  
-
-  
   <!--[if lt IE 9]>
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
         <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
         <script src="_static/doctools.js"></script>
         <script src="_static/js/ga.js"></script>
-    
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-
-    
+    <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Support for Docker and OCI" href="singularity_and_docker.html" />
     <link rel="prev" title="Definition Files" href="definition_files.html" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
-
-          
             <a href="index.html" class="icon icon-home"> Singularity User Guide
-          
-
-          
-            
             <img src="_static/logo.png" class="logo" alt="Logo"/>
-          
           </a>
-
-          
-            
-            
               <div class="version">
                 3.8
               </div>
-            
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -86,18 +43,7 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul>
 <li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction to Singularity</a></li>
 <li class="toctree-l1"><a class="reference internal" href="quick_start.html">Quick Start</a></li>
@@ -161,84 +107,41 @@
 <li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
 </ul>
 
-            
-          
         </div>
-        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="index.html">Singularity User Guide</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content style-external-links">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-        
       <li>Build Environment</li>
-    
-    
       <li class="wy-breadcrumbs-aside">
-        
-          
-            
               <a href="https://github.com/hpcng/singularity-userdocs/blob/master/build_env.rst" class="fa fa-github"> Edit on GitHub</a>
-            
-          
-        
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
-  <div class="section" id="build-environment">
-<span id="id1"></span><h1>Build Environment<a class="headerlink" href="#build-environment" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="overview">
-<span id="sec-buildenv"></span><h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+             
+  <section id="build-environment">
+<span id="id1"></span><h1>Build Environment<a class="headerlink" href="#build-environment" title="Permalink to this headline"></a></h1>
+<section id="overview">
+<span id="sec-buildenv"></span><h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline"></a></h2>
 <p>You may wish to customize your build
 environment by doing things such as specifying a custom cache directory for images or
 sending your Docker Credentials to the registry endpoint. Here we will discuss these and other topics
 related to the build environment.</p>
-</div>
-<div class="section" id="cache-folders">
-<span id="sec-cache"></span><h2>Cache Folders<a class="headerlink" href="#cache-folders" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="cache-folders">
+<span id="sec-cache"></span><h2>Cache Folders<a class="headerlink" href="#cache-folders" title="Permalink to this headline"></a></h2>
 <p>Singularity will cache SIF container images generated from remote
 sources, and any OCI/docker layers used to create them. The cache is
 created at <code class="docutils literal notranslate"><span class="pre">$HOME/.singularity/cache</span></code> by default. The location of
@@ -290,9 +193,9 @@ needed in future runs.</p>
 as this may cause checksum / integrity errors when you run or build
 containers. If you experience problems use <code class="docutils literal notranslate"><span class="pre">singularity</span> <span class="pre">cache</span> <span class="pre">clean</span></code>
 to reset the cache to a clean, empty state.</p>
-</div>
-<div class="section" id="cache-commands">
-<h2>Cache commands<a class="headerlink" href="#cache-commands" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="cache-commands">
+<h2>Cache commands<a class="headerlink" href="#cache-commands" title="Permalink to this headline"></a></h2>
 <p>The <code class="docutils literal notranslate"><span class="pre">cache</span></code> command for Singularity allows you to view and clean up
 your cache, without manually inspecting the cache directories.</p>
 <div class="admonition note">
@@ -302,8 +205,8 @@ cache location for those builds is <code class="docutils literal notranslate"><s
 will need to use <code class="docutils literal notranslate"><span class="pre">sudo</span></code> when running <code class="docutils literal notranslate"><span class="pre">cache</span> <span class="pre">clean</span></code> or <code class="docutils literal notranslate"><span class="pre">cache</span>
 <span class="pre">list</span></code> to manage these cache entries.</p>
 </div>
-<div class="section" id="listing-cache">
-<h3>Listing Cache<a class="headerlink" href="#listing-cache" title="Permalink to this headline">¶</a></h3>
+<section id="listing-cache">
+<h3>Listing Cache<a class="headerlink" href="#listing-cache" title="Permalink to this headline"></a></h3>
 <p>To view a summary of cache usage, use <code class="docutils literal notranslate"><span class="pre">singularity</span> <span class="pre">cache</span> <span class="pre">list</span></code>:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ singularity cache list
 There are 4 container file(s) using 59.45 MB and 23 oci blob file(s) using 379.10 MB of space
@@ -354,9 +257,9 @@ caches are named for the source of the image e.g. <code class="docutils literal 
 <code class="docutils literal notranslate"><span class="pre">oras</span></code>.</p>
 <p>You can limit the cache list to a specific cache type with the
 <code class="docutils literal notranslate"><span class="pre">-type</span></code> / <code class="docutils literal notranslate"><span class="pre">-t</span></code> option.</p>
-</div>
-<div class="section" id="cleaning-the-cache">
-<h3>Cleaning the Cache<a class="headerlink" href="#cleaning-the-cache" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="cleaning-the-cache">
+<h3>Cleaning the Cache<a class="headerlink" href="#cleaning-the-cache" title="Permalink to this headline"></a></h3>
 <p>To reclaim space used by the Singularity cache, use <code class="docutils literal notranslate"><span class="pre">singularity</span>
 <span class="pre">cache</span> <span class="pre">clean</span></code>.</p>
 <p>By default <code class="docutils literal notranslate"><span class="pre">singularity</span> <span class="pre">cache</span> <span class="pre">clean</span></code> will remove all cache entries,
@@ -381,10 +284,10 @@ images, use the <code class="docutils literal notranslate"><span class="pre">typ
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ singularity cache clean --type library
 </pre></div>
 </div>
-</div>
-</div>
-<div class="section" id="temporary-folders">
-<span id="sec-temporaryfolders"></span><h2>Temporary Folders<a class="headerlink" href="#temporary-folders" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="temporary-folders">
+<span id="sec-temporaryfolders"></span><h2>Temporary Folders<a class="headerlink" href="#temporary-folders" title="Permalink to this headline"></a></h2>
 <p>When building a container, or pulling/running a Singularity container
 from a Docker/OCI source, a temporary working space is required. The
 container is constructed in this temporary space before being packaged
@@ -416,27 +319,27 @@ that can interfere with some container builds.</p>
 <code class="docutils literal notranslate"><span class="pre">tmpfs</span></code> <code class="docutils literal notranslate"><span class="pre">/tmp</span></code> mount on your system if you experience
 problems.</p>
 </div>
-</div>
-<div class="section" id="encrypted-containers">
-<h2>Encrypted Containers<a class="headerlink" href="#encrypted-containers" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="encrypted-containers">
+<h2>Encrypted Containers<a class="headerlink" href="#encrypted-containers" title="Permalink to this headline"></a></h2>
 <p>Beginning in Singularity 3.4.0 it is possible to build and run encrypted
 containers.  The containers are decrypted at runtime entirely in kernel space,
 meaning that no intermediate decrypted data is ever present on disk or in
 memory.  See <a class="reference internal" href="encryption.html#encryption"><span class="std std-ref">encrypted containers</span></a> for more details.</p>
-</div>
-<div class="section" id="environment-variables">
-<h2>Environment Variables<a class="headerlink" href="#environment-variables" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="environment-variables">
+<h2>Environment Variables<a class="headerlink" href="#environment-variables" title="Permalink to this headline"></a></h2>
 <ol class="arabic simple">
 <li><p>If a flag is represented by both a CLI option and an environment variable, and both are set, the CLI option will always take precedence. This is true for all environment variables except for <code class="docutils literal notranslate"><span class="pre">SINGULARITY_BIND</span></code> and <code class="docutils literal notranslate"><span class="pre">SINGULARITY_BINDPATH</span></code> which is combined with the <code class="docutils literal notranslate"><span class="pre">--bind</span></code> option, argument pair if both are present.</p></li>
 <li><p>Environment variables overwrite default values in the CLI code</p></li>
 <li><p>Any defaults in the CLI code are applied.</p></li>
 </ol>
-<div class="section" id="defaults">
-<h3>Defaults<a class="headerlink" href="#defaults" title="Permalink to this headline">¶</a></h3>
+<section id="defaults">
+<h3>Defaults<a class="headerlink" href="#defaults" title="Permalink to this headline"></a></h3>
 <p>The following variables have defaults that can be customized by you via
 environment variables at runtime.</p>
-<div class="section" id="docker">
-<h4>Docker<a class="headerlink" href="#docker" title="Permalink to this headline">¶</a></h4>
+<section id="docker">
+<h4>Docker<a class="headerlink" href="#docker" title="Permalink to this headline"></a></h4>
 <p><strong>SINGULARITY_DOCKER_LOGIN</strong> Used for the interactive login for Docker Hub.</p>
 <p><strong>SINGULARITY_DOCKER_USERNAME</strong> Your Docker username.</p>
 <p><strong>SINGULARITY_DOCKER_PASSWORD</strong> Your Docker password.</p>
@@ -449,68 +352,51 @@ registry that doesn’t have https, and it speaks for itself. If you
 export the variable <code class="docutils literal notranslate"><span class="pre">SINGULARITY_NOHTTPS</span></code> you can force the software to not use https when
 interacting with a Docker registry. This use case is typically for use
 of a local registry.</p>
-</div>
-<div class="section" id="library">
-<h4>Library<a class="headerlink" href="#library" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="library">
+<h4>Library<a class="headerlink" href="#library" title="Permalink to this headline"></a></h4>
 <p><strong>SINGULARITY_BUILDER</strong> Used to specify the remote builder service URL. The default value is our remote builder.</p>
 <p><strong>SINGULARITY_LIBRARY</strong> Used to specify the library to pull from. Default is set to our Cloud Library.</p>
 <p><strong>SINGULARITY_REMOTE</strong> Used to build an image remotely (This does not require root). The default is set to false.</p>
-</div>
-<div class="section" id="encryption">
-<h4>Encryption<a class="headerlink" href="#encryption" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="encryption">
+<h4>Encryption<a class="headerlink" href="#encryption" title="Permalink to this headline"></a></h4>
 <p><strong>SINGULARITY_ENCRYPTION_PASSPHRASE</strong> Used to pass a plaintext passphrase to encrypt a container file system (with the <code class="docutils literal notranslate"><span class="pre">--encrypt</span></code> flag). The default is empty.</p>
 <p><strong>SINGULARITY_ENCRYPTION_PEM_PATH</strong> Used to specify the location of a public key to use for container encryption (with the <code class="docutils literal notranslate"><span class="pre">--encrypt</span></code> flag). The default is empty.</p>
-</div>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
+</section>
 
 
            </div>
-           
           </div>
-          <footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="singularity_and_docker.html" class="btn btn-neutral float-right" title="Support for Docker and OCI" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="definition_files.html" class="btn btn-neutral float-left" title="Definition Files" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="singularity_and_docker.html" class="btn btn-neutral float-right" title="Support for Docker and OCI" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &#169; Copyright 2017-2021, HPCng.
-
-    </p>
+    <p>&#169; Copyright 2017-2021, HPCng.</p>
   </div>
-    
-    
-    
-    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    
-    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
 
 </footer>
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>

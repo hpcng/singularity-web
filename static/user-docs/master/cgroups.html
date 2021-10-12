@@ -1,84 +1,41 @@
-
-
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
-  
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
   <title>Limiting container resources with cgroups &mdash; Singularity User Guide 3.8 documentation</title>
-  
-
-  
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
-
-  
-  
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
     <link rel="shortcut icon" href="_static/favicon.png"/>
-  
-
-  
-  
-
-  
-
-  
   <!--[if lt IE 9]>
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
         <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
         <script src="_static/doctools.js"></script>
         <script src="_static/js/ga.js"></script>
-    
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-
-    
+    <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Singularity and MPI applications" href="mpi.html" />
     <link rel="prev" title="Network virtualization" href="networking.html" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
-
-          
             <a href="index.html" class="icon icon-home"> Singularity User Guide
-          
-
-          
-            
             <img src="_static/logo.png" class="logo" alt="Logo"/>
-          
           </a>
-
-          
-            
-            
               <div class="version">
                 3.8
               </div>
-            
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -86,18 +43,7 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul>
 <li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction to Singularity</a></li>
 <li class="toctree-l1"><a class="reference internal" href="quick_start.html">Quick Start</a></li>
@@ -158,79 +104,36 @@
 <li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
 </ul>
 
-            
-          
         </div>
-        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="index.html">Singularity User Guide</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content style-external-links">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-        
       <li>Limiting container resources with cgroups</li>
-    
-    
       <li class="wy-breadcrumbs-aside">
-        
-          
-            
               <a href="https://github.com/hpcng/singularity-userdocs/blob/master/cgroups.rst" class="fa fa-github"> Edit on GitHub</a>
-            
-          
-        
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
-  <div class="section" id="limiting-container-resources-with-cgroups">
-<span id="cgroups"></span><h1>Limiting container resources with cgroups<a class="headerlink" href="#limiting-container-resources-with-cgroups" title="Permalink to this headline">¶</a></h1>
+             
+  <section id="limiting-container-resources-with-cgroups">
+<span id="cgroups"></span><h1>Limiting container resources with cgroups<a class="headerlink" href="#limiting-container-resources-with-cgroups" title="Permalink to this headline"></a></h1>
 <p>Starting in Singularity 3.0, users have the ability to limit container resources
 using cgroups.</p>
-<div class="section" id="overview">
-<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline"></a></h2>
 <p>Singularity cgroups support can be configured and utilized via a TOML file. An
 example file is typically installed at
 <code class="docutils literal notranslate"><span class="pre">/usr/local/etc/singularity/cgroups/cgroups.toml</span></code> (but may also be installed
@@ -243,11 +146,11 @@ option like so:</p>
 </pre></div>
 </div>
 <p>The <code class="docutils literal notranslate"><span class="pre">--apply-cgroups</span></code> option can only be used with root privileges.</p>
-</div>
-<div class="section" id="examples">
-<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="limiting-memory">
-<h3>Limiting memory<a class="headerlink" href="#limiting-memory" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline"></a></h2>
+<section id="limiting-memory">
+<h3>Limiting memory<a class="headerlink" href="#limiting-memory" title="Permalink to this headline"></a></h3>
 <p>To limit the amount of memory that your container uses to 500MB (524288000
 bytes), follow this example.  First, create a <code class="docutils literal notranslate"><span class="pre">cgroups.toml</span></code> file like this
 and save it in your home directory.</p>
@@ -273,13 +176,13 @@ the following command.</p>
 </div>
 <p>Similarly, the remaining examples can be tested by starting instances and
 examining the contents of the appropriate subdirectories of <code class="docutils literal notranslate"><span class="pre">/sys/fs/cgroup/</span></code>.</p>
-</div>
-<div class="section" id="limiting-cpu">
-<h3>Limiting CPU<a class="headerlink" href="#limiting-cpu" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="limiting-cpu">
+<h3>Limiting CPU<a class="headerlink" href="#limiting-cpu" title="Permalink to this headline"></a></h3>
 <p>Limit CPU resources using one of the following strategies. The <code class="docutils literal notranslate"><span class="pre">cpu</span></code> section
 of the configuration file can limit memory with the following:</p>
-<div class="section" id="shares">
-<h4>shares<a class="headerlink" href="#shares" title="Permalink to this headline">¶</a></h4>
+<section id="shares">
+<h4>shares<a class="headerlink" href="#shares" title="Permalink to this headline"></a></h4>
 <p>This corresponds to a ratio versus other cgroups with cpu shares. Usually the
 default value is <code class="docutils literal notranslate"><span class="pre">1024</span></code>. That means if you want to allow to use 50% of a
 single CPU, you will set <code class="docutils literal notranslate"><span class="pre">512</span></code> as value.</p>
@@ -292,9 +195,9 @@ available in the system, due to the work conserving nature of the scheduler, so
 a contained process can consume all CPU cycles even with a ratio of 50%. The
 ratio is only applied when two or more processes conflicts with their needs of
 CPU cycles.</p>
-</div>
-<div class="section" id="quota-period">
-<h4>quota/period<a class="headerlink" href="#quota-period" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="quota-period">
+<h4>quota/period<a class="headerlink" href="#quota-period" title="Permalink to this headline"></a></h4>
 <p>You can enforce hard limits on the CPU cycles a cgroup can consume, so
 contained processes can’t use more than the amount of CPU time set for the
 cgroup. <code class="docutils literal notranslate"><span class="pre">quota</span></code> allows you to configure the amount of CPU time that a cgroup
@@ -305,9 +208,9 @@ amount of CPU time to 20ms during period of 100ms:</p>
     quota = 20000
 </pre></div>
 </div>
-</div>
-<div class="section" id="cpus-mems">
-<h4>cpus/mems<a class="headerlink" href="#cpus-mems" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="cpus-mems">
+<h4>cpus/mems<a class="headerlink" href="#cpus-mems" title="Permalink to this headline"></a></h4>
 <p>You can also restrict access to specific CPUs and associated memory nodes by
 using <code class="docutils literal notranslate"><span class="pre">cpus/mems</span></code> fields:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[cpu]
@@ -327,10 +230,10 @@ links:</p>
 <li><p><a class="reference external" href="https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/resource_management_guide/sec-cpuset">Red Hat resource management guide section 3.4 CPUSET</a></p></li>
 <li><p><a class="reference external" href="https://www.kernel.org/doc/Documentation/scheduler/sched-bwc.txt">Kernel scheduler documentation</a></p></li>
 </ul>
-</div>
-</div>
-<div class="section" id="limiting-io">
-<h3>Limiting IO<a class="headerlink" href="#limiting-io" title="Permalink to this headline">¶</a></h3>
+</section>
+</section>
+<section id="limiting-io">
+<h3>Limiting IO<a class="headerlink" href="#limiting-io" title="Permalink to this headline"></a></h3>
 <p>You can limit and monitor access to I/O for block devices.  Use the
 <code class="docutils literal notranslate"><span class="pre">[blockIO]</span></code> section of the configuration file to do this like so:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[blockIO]
@@ -391,8 +294,8 @@ block device, you can do the following. The rate is specified in IOPS.</p>
 <li><p><a class="reference external" href="https://www.kernel.org/doc/Documentation/cgroup-v1/blkio-controller.txt">Kernel block IO controller documentation</a></p></li>
 <li><p><a class="reference external" href="https://www.kernel.org/doc/Documentation/block/cfq-iosched.txt">Kernel CFQ scheduler documentation</a></p></li>
 </ul>
-<div class="section" id="limiting-device-access">
-<h4>Limiting device access<a class="headerlink" href="#limiting-device-access" title="Permalink to this headline">¶</a></h4>
+<section id="limiting-device-access">
+<h4>Limiting device access<a class="headerlink" href="#limiting-device-access" title="Permalink to this headline"></a></h4>
 <p>You can limit read, write, or creation of devices. In this example, a container
 is configured to only be able to read from or write to <code class="docutils literal notranslate"><span class="pre">/dev/null</span></code>.</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[[devices]]
@@ -408,57 +311,40 @@ is configured to only be able to read from or write to <code class="docutils lit
 </div>
 <p>For more information on limiting access to devices the <a class="reference external" href="https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/resource_management_guide/sec-devices">Red Hat resource
 management guide section 3.5 DEVICES</a>.</p>
-</div>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
+</section>
 
 
            </div>
-           
           </div>
-          <footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="mpi.html" class="btn btn-neutral float-right" title="Singularity and MPI applications" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="networking.html" class="btn btn-neutral float-left" title="Network virtualization" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="mpi.html" class="btn btn-neutral float-right" title="Singularity and MPI applications" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &#169; Copyright 2017-2021, HPCng.
-
-    </p>
+    <p>&#169; Copyright 2017-2021, HPCng.</p>
   </div>
-    
-    
-    
-    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    
-    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
 
 </footer>
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>

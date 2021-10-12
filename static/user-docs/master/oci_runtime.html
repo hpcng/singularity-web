@@ -1,84 +1,41 @@
-
-
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
-  
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
   <title>OCI Runtime Support &mdash; Singularity User Guide 3.8 documentation</title>
-  
-
-  
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
-
-  
-  
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
     <link rel="shortcut icon" href="_static/favicon.png"/>
-  
-
-  
-  
-
-  
-
-  
   <!--[if lt IE 9]>
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
         <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
         <script src="_static/doctools.js"></script>
         <script src="_static/js/ga.js"></script>
-    
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-
-    
+    <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Plugins" href="plugins.html" />
     <link rel="prev" title="Environment and Metadata" href="environment_and_metadata.html" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
-
-          
             <a href="index.html" class="icon icon-home"> Singularity User Guide
-          
-
-          
-            
             <img src="_static/logo.png" class="logo" alt="Logo"/>
-          
           </a>
-
-          
-            
-            
               <div class="version">
                 3.8
               </div>
-            
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -86,18 +43,7 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul>
 <li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction to Singularity</a></li>
 <li class="toctree-l1"><a class="reference internal" href="quick_start.html">Quick Start</a></li>
@@ -152,77 +98,34 @@
 <li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
 </ul>
 
-            
-          
         </div>
-        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="index.html">Singularity User Guide</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content style-external-links">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-        
       <li>OCI Runtime Support</li>
-    
-    
       <li class="wy-breadcrumbs-aside">
-        
-          
-            
               <a href="https://github.com/hpcng/singularity-userdocs/blob/master/oci_runtime.rst" class="fa fa-github"> Edit on GitHub</a>
-            
-          
-        
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
-  <span class="target" id="oci-runtime"></span><div class="section" id="oci-runtime-support">
-<h1>OCI Runtime Support<a class="headerlink" href="#oci-runtime-support" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="overview">
-<span id="sec-oci-runtime-overview"></span><h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+             
+  <span class="target" id="oci-runtime"></span><section id="oci-runtime-support">
+<h1>OCI Runtime Support<a class="headerlink" href="#oci-runtime-support" title="Permalink to this headline"></a></h1>
+<section id="overview">
+<span id="sec-oci-runtime-overview"></span><h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline"></a></h2>
 <p>OCI is an acronym for the <a class="reference external" href="https://www.opencontainers.org/">Open Containers Initiative</a> - an independent organization whose mandate is to develop open standards relating to containerization. To date, standardization efforts have focused on container formats and runtimes. Singularity’s compliance with respect to the OCI Image Specification is considered in detail <a class="reference internal" href="singularity_and_docker.html#sec-oci-overview"><span class="std std-ref">elsewhere</span></a>. It is Singularity’s compliance with the OCI Runtime Specification that is of concern here.</p>
 <p>Briefly, compliance with respect to the OCI Runtime Specification is addressed in Singularity through the introduction of the <code class="docutils literal notranslate"><span class="pre">oci</span></code> command group. Although this command group can, in principle, be used to provide a runtime that supports end users, in this initial documentation effort, emphasis is placed upon interoperability with Kubernetes; more specifically, interoperability with Kubernetes via the <a class="reference external" href="https://www.sylabs.io/guides/cri/1.0/user-guide/index.html">Singularity Container Runtime Interface</a>.</p>
 <p>Owing to this restricted focus, a subset of the Singularity <code class="docutils literal notranslate"><span class="pre">oci</span></code> command group receives attention here; specifically:</p>
@@ -237,11 +140,11 @@
 <p class="admonition-title">Note</p>
 <p>All commands in the <code class="docutils literal notranslate"><span class="pre">oci</span></code> command group require <code class="docutils literal notranslate"><span class="pre">root</span></code> privileges.</p>
 </div>
-</div>
-<div class="section" id="mounted-oci-filesystem-bundles">
-<h2>Mounted OCI Filesystem Bundles<a class="headerlink" href="#mounted-oci-filesystem-bundles" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="mounting-an-oci-filesystem-bundle">
-<h3>Mounting an OCI Filesystem Bundle<a class="headerlink" href="#mounting-an-oci-filesystem-bundle" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="mounted-oci-filesystem-bundles">
+<h2>Mounted OCI Filesystem Bundles<a class="headerlink" href="#mounted-oci-filesystem-bundles" title="Permalink to this headline"></a></h2>
+<section id="mounting-an-oci-filesystem-bundle">
+<h3>Mounting an OCI Filesystem Bundle<a class="headerlink" href="#mounting-an-oci-filesystem-bundle" title="Permalink to this headline"></a></h3>
 <p><a class="reference external" href="https://busybox.net/about.html">BusyBox</a> is used here for the purpose of illustration.</p>
 <p>Suppose the Singularity Image Format (SIF) file <code class="docutils literal notranslate"><span class="pre">busybox_latest.sif</span></code> exists locally. (Recall:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ singularity pull docker://busybox
@@ -280,9 +183,9 @@ overlay                       19519312 2620740  15883996  15% /var/tmp/busybox/r
 drwx------ 4 root root 4096 Apr  4 14:30 /var/tmp/busybox
 </pre></div>
 </div>
-</div>
-<div class="section" id="content-of-an-oci-compliant-filesystem-bundle">
-<h3>Content of an OCI Compliant Filesystem Bundle<a class="headerlink" href="#content-of-an-oci-compliant-filesystem-bundle" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="content-of-an-oci-compliant-filesystem-bundle">
+<h3>Content of an OCI Compliant Filesystem Bundle<a class="headerlink" href="#content-of-an-oci-compliant-filesystem-bundle" title="Permalink to this headline"></a></h3>
 <p>The <em>expected</em> contents of the mounted filesystem are as follows:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ sudo ls -la /var/tmp/busybox
 total 28
@@ -922,10 +825,10 @@ a writable file system on an otherwise immutable read-only container; thus they 
 <p class="admonition-title">Note</p>
 <p>SIF is stated to be an extensible format; by encapsulating a filesystem bundle that conforms with the OCI runtime specification, this extensibility is evident.</p>
 </div>
-</div>
-</div>
-<div class="section" id="creating-oci-compliant-container-instances">
-<h2>Creating OCI Compliant Container Instances<a class="headerlink" href="#creating-oci-compliant-container-instances" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="creating-oci-compliant-container-instances">
+<h2>Creating OCI Compliant Container Instances<a class="headerlink" href="#creating-oci-compliant-container-instances" title="Permalink to this headline"></a></h2>
 <p>SIF files encapsulate the OCI runtime. By ‘OCI mounting’ a SIF file (see above), this encapsulated runtime is revealed; please refer to the note below for additional details. Once revealed, the filesystem bundle can be used to bootstrap the creation of an OCI compliant container instance as follows:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ sudo singularity oci create -b /var/tmp/busybox busybox1
 </pre></div>
@@ -955,9 +858,9 @@ a writable file system on an otherwise immutable read-only container; thus they 
 </div>
 <p>Container state, as conveyed via these properties, is in compliance with the OCI runtime specification as detailed <a class="reference external" href="https://github.com/opencontainers/runtime-spec/blob/master/runtime.md#state">here</a>.</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">create</span></code> command has a number of options available. Of these, real-time logging to a file is likely to be of particular value - e.g., in deployments where auditing requirements exist.</p>
-</div>
-<div class="section" id="unmounting-oci-filesystem-bundles">
-<h2>Unmounting OCI Filesystem Bundles<a class="headerlink" href="#unmounting-oci-filesystem-bundles" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="unmounting-oci-filesystem-bundles">
+<h2>Unmounting OCI Filesystem Bundles<a class="headerlink" href="#unmounting-oci-filesystem-bundles" title="Permalink to this headline"></a></h2>
 <p>To unmount a mounted OCI filesystem bundle, the following command should be issued:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ sudo singularity oci umount /var/tmp/busybox
 </pre></div>
@@ -966,9 +869,9 @@ a writable file system on an otherwise immutable read-only container; thus they 
 <p class="admonition-title">Note</p>
 <p>The argument provided to <code class="docutils literal notranslate"><span class="pre">oci</span> <span class="pre">umount</span></code> above is the name of the bundle path, <code class="docutils literal notranslate"><span class="pre">/var/tmp/busybox</span></code>, as opposed to the mount point for the overlay filesystem, <code class="docutils literal notranslate"><span class="pre">/var/tmp/busybox/rootfs</span></code>.</p>
 </div>
-</div>
-<div class="section" id="kubernetes-integration">
-<h2>Kubernetes Integration<a class="headerlink" href="#kubernetes-integration" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="kubernetes-integration">
+<h2>Kubernetes Integration<a class="headerlink" href="#kubernetes-integration" title="Permalink to this headline"></a></h2>
 <p>As noted at the <a class="reference internal" href="#sec-oci-runtime-overview"><span class="std std-ref">outset here</span></a>, in documenting support for an OCI runtime in Singularity, the impetus is initially derived from the requirement to integrate with <a class="reference external" href="https://kubernetes.io/">Kubernetes</a>. Simply stated, Kubernetes is an open-source system for orchestrating containers; developed originally at Google, Kubernetes was contributed as seed technology to the <a class="reference external" href="https://www.cncf.io/">Cloud Native Compute Foundation</a> (CNCF). At this point, Kubernetes is regarded as a Graduated Project by CNCF, and is being used widely in production deployments. Even though Kubernetes emphasizes an orientation around services, it is appealing to those seeking to orchestrate containers having compute-driven requirements. Furthermore, emerging classes of workload in AI for example, appear to have requirements that are best addressed by a combination of service and traditional HPC infrastructures. Thus there is ample existing, as well as emerging, interest in integrating Singularity containers with Kubernetes.</p>
 <p>The connection with support for the OCI runtime documented here, within the context of a Singularity-Kubernetes integration, can be best established through an architectural schematic. Dating back to the introduction of a Container Runtime Interface (CRI) for Kubernetes in late 2016, the schematic below is a modified version of the original presented in <a class="reference external" href="https://kubernetes.io/blog/2016/12/container-runtime-interface-cri-in-kubernetes/">a Kubernetes blog post</a>. The lower branch of this schematic is essentially a reproduction of the original; it does however, place emphasis on OCI compliance in terms of the CRI and containers (the runtime as well as their instances).</p>
 <img alt="_images/sycri_ociruntime_implementation.png" src="_images/sycri_ociruntime_implementation.png" />
@@ -981,55 +884,38 @@ a writable file system on an otherwise immutable read-only container; thus they 
 </div></blockquote>
 <p>The implementation of a CRI for Singularity is the emphasis of a separate and distinct <a class="reference external" href="https://github.com/sylabs/singularity-cri">open source project</a>; the implementation of this CRI is documented here. For the rationale conveyed through the architectural schematic, Singularity CRI’s dependence upon Singularity with OCI runtime support is made clear as <a class="reference external" href="https://www.sylabs.io/guides/cri/1.0/user-guide/installation.html?highlight=oci#install-dependencies">an installation prerequisite</a>. User-facing documentation for Singularity CRI details usage in a Kubernetes context - usage, of course, that involves orchestration of a Singularity container obtained from the <a class="reference external" href="https://cloud.sylabs.io/library">Sylabs Cloud Container Library</a>. Because the entire Kubernetes-based deployment can exist within a single instance of a Singularity container, Singularity CRI can be easily evaluated via Sykube; inspired by <a class="reference external" href="https://kubernetes.io/docs/setup/minikube/">Minikube</a>, <a class="reference external" href="https://www.sylabs.io/guides/cri/1.0/user-guide/sykube.html">use of Sykube</a> is included in the documentation for Singularity CRI.</p>
 <p>Documenting the implementation of an OCI-compliant runtime for Singularity has been the emphasis here. Although this standalone runtime can be used by end users independent of anything to do with Singularity and Kubernetes, the primary purpose here has been documenting it within this integrated context. In other words, by making use of the OCI runtime presented by Singularity, commands originating from Kubernetes (see, e.g., <a class="reference external" href="https://sylabs.io/guides/cri/1.0/user-guide/examples.html">Basic Usage</a> in the Singularity CRI documentation) have impact ultimately on Singularity containers via the CRI. Singularity CRI is implemented as a <a class="reference external" href="https://grpc.io/">gRPC</a> server - i.e., a persistent service available to <a class="reference external" href="https://kubernetes.io/docs/reference/command-line-tools-reference/kubelet/">Kubelets</a> (node agents). Taken together, this integration allows Singularity containers to be manipulated directly from Kubernetes.</p>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>
-           
           </div>
-          <footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="plugins.html" class="btn btn-neutral float-right" title="Plugins" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="environment_and_metadata.html" class="btn btn-neutral float-left" title="Environment and Metadata" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="plugins.html" class="btn btn-neutral float-right" title="Plugins" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &#169; Copyright 2017-2021, HPCng.
-
-    </p>
+    <p>&#169; Copyright 2017-2021, HPCng.</p>
   </div>
-    
-    
-    
-    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    
-    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
 
 </footer>
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>

@@ -1,84 +1,41 @@
-
-
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
-  
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
   <title>Cloud Library &mdash; Singularity User Guide 3.8 documentation</title>
-  
-
-  
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
-
-  
-  
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
     <link rel="shortcut icon" href="_static/favicon.png"/>
-  
-
-  
-  
-
-  
-
-  
   <!--[if lt IE 9]>
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
         <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
         <script src="_static/doctools.js"></script>
         <script src="_static/js/ga.js"></script>
-    
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-
-    
+    <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Bind Paths and Mounts" href="bind_paths_and_mounts.html" />
     <link rel="prev" title="Remote Endpoints" href="endpoint.html" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
-
-          
             <a href="index.html" class="icon icon-home"> Singularity User Guide
-          
-
-          
-            
             <img src="_static/logo.png" class="logo" alt="Logo"/>
-          
           </a>
-
-          
-            
-            
               <div class="version">
                 3.8
               </div>
-            
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -86,18 +43,7 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul>
 <li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction to Singularity</a></li>
 <li class="toctree-l1"><a class="reference internal" href="quick_start.html">Quick Start</a></li>
@@ -160,86 +106,43 @@
 <li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
 </ul>
 
-            
-          
         </div>
-        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="index.html">Singularity User Guide</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content style-external-links">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-        
       <li>Cloud Library</li>
-    
-    
       <li class="wy-breadcrumbs-aside">
-        
-          
-            
               <a href="https://github.com/hpcng/singularity-userdocs/blob/master/cloud_library.rst" class="fa fa-github"> Edit on GitHub</a>
-            
-          
-        
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
-  <div class="section" id="cloud-library">
-<span id="id1"></span><h1>Cloud Library<a class="headerlink" href="#cloud-library" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="overview">
-<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+             
+  <section id="cloud-library">
+<span id="id1"></span><h1>Cloud Library<a class="headerlink" href="#cloud-library" title="Permalink to this headline"></a></h1>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline"></a></h2>
 <p>The Sylabs Cloud Library is the place to <a class="reference internal" href="#push"><span class="std std-ref">push</span></a> your
 containers to the cloud so other users can <a class="reference internal" href="#pull"><span class="std std-ref">pull</span></a>,
 <a class="reference internal" href="signNverify.html#signnverify"><span class="std std-ref">verify</span></a>, and use them.</p>
 <p>The Sylabs Cloud also provides a <a class="reference internal" href="#remote-builder"><span class="std std-ref">Remote Builder</span></a>, allowing you to build containers on a secure remote
 service. This is convenient so that you can build containers on
 systems where you do not have root privileges.</p>
-</div>
-<div class="section" id="make-an-account">
-<span id="make-a-account"></span><h2>Make an Account<a class="headerlink" href="#make-an-account" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="make-an-account">
+<span id="make-a-account"></span><h2>Make an Account<a class="headerlink" href="#make-an-account" title="Permalink to this headline"></a></h2>
 <p>Making an account is easy, and straightforward:</p>
 <blockquote>
 <div><ol class="arabic simple">
@@ -249,9 +152,9 @@ systems where you do not have root privileges.</p>
 <li><p>Type your passwords, and that’s it!</p></li>
 </ol>
 </div></blockquote>
-</div>
-<div class="section" id="creating-a-access-token">
-<span id="id2"></span><h2>Creating a Access token<a class="headerlink" href="#creating-a-access-token" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="creating-a-access-token">
+<span id="id2"></span><h2>Creating a Access token<a class="headerlink" href="#creating-a-access-token" title="Permalink to this headline"></a></h2>
 <p>Access tokens for pushing a container, and remote builder.</p>
 <p>To generate a access token, do the following steps:</p>
 <blockquote>
@@ -267,9 +170,9 @@ systems where you do not have root privileges.</p>
 </ol>
 </div></blockquote>
 <p>Now that you have your token, you are ready to push your container!</p>
-</div>
-<div class="section" id="pushing-a-container">
-<span id="push"></span><h2>Pushing a Container<a class="headerlink" href="#pushing-a-container" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="pushing-a-container">
+<span id="push"></span><h2>Pushing a Container<a class="headerlink" href="#pushing-a-container" title="Permalink to this headline"></a></h2>
 <p>The <code class="docutils literal notranslate"><span class="pre">singularity</span> <span class="pre">push</span></code> command will push a container to the
 container library with the given URL. Here’s an example of a typical
 push command:</p>
@@ -304,9 +207,9 @@ alternative to setting the description via the web interface:</p>
 <p>Note that when you push to a library that supports it, Singularity 3.7
 and above will report your quota usage and the direct URL to view the
 container in your web browser.</p>
-</div>
-<div class="section" id="pulling-a-container">
-<span id="pull"></span><h2>Pulling a container<a class="headerlink" href="#pulling-a-container" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="pulling-a-container">
+<span id="pull"></span><h2>Pulling a container<a class="headerlink" href="#pulling-a-container" title="Permalink to this headline"></a></h2>
 <p>The <code class="docutils literal notranslate"><span class="pre">singularity</span> <span class="pre">pull</span></code> command will download a container from the <a class="reference external" href="https://cloud.sylabs.io/library">Library</a>
 (<code class="docutils literal notranslate"><span class="pre">library://</span></code>), <a class="reference external" href="https://hub.docker.com/">Docker Hub</a> (<code class="docutils literal notranslate"><span class="pre">docker://</span></code>), and also
 <a class="reference external" href="https://singularity-hub.org">Shub</a> (<code class="docutils literal notranslate"><span class="pre">shub://</span></code>).</p>
@@ -331,8 +234,8 @@ $ singularity pull file-out.sif docker://alpine:latest
 </pre></div>
 </div>
 <p>Of course, you can pull your own containers. Here’s what that will look like:</p>
-<div class="section" id="pulling-your-own-container">
-<h3>Pulling your own container<a class="headerlink" href="#pulling-your-own-container" title="Permalink to this headline">¶</a></h3>
+<section id="pulling-your-own-container">
+<h3>Pulling your own container<a class="headerlink" href="#pulling-your-own-container" title="Permalink to this headline"></a></h3>
 <p>Pulling your own container is just like pulling from Github, Docker, etc…</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ singularity pull out-file.sif library://your-name/project-dir/my-container:latest
 
@@ -346,24 +249,24 @@ $ singularity pull out-file.sif library://your-name/project-dir/my-container:1.0
 <p>You <em>don’t</em> have to specify a output file, one will be created automatically, but it’s good practice to always
 specify your output file.</p>
 </div>
-</div>
-</div>
-<div class="section" id="verify-sign-your-container">
-<h2>Verify/Sign your Container<a class="headerlink" href="#verify-sign-your-container" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="verify-sign-your-container">
+<h2>Verify/Sign your Container<a class="headerlink" href="#verify-sign-your-container" title="Permalink to this headline"></a></h2>
 <p>Verify containers that you pull from the library, ensuring they are bit-for-bit reproductions of the original image.</p>
 <p>Check out <a class="reference internal" href="signNverify.html#signnverify"><span class="std std-ref">this page</span></a> on how to: <a class="reference internal" href="signNverify.html#verify-container-from-library"><span class="std std-ref">verify a container</span></a>,
 <a class="reference internal" href="signNverify.html#sign-your-own-containers"><span class="std std-ref">making PGP key, and sign your own containers</span></a>.</p>
-</div>
-<div class="section" id="searching-the-library-for-containers">
-<span id="search-the-library"></span><h2>Searching the Library for Containers<a class="headerlink" href="#searching-the-library-for-containers" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="searching-the-library-for-containers">
+<span id="search-the-library"></span><h2>Searching the Library for Containers<a class="headerlink" href="#searching-the-library-for-containers" title="Permalink to this headline"></a></h2>
 <p>To find interesting or useful containers in the library, you can open
 <a class="reference external" href="https://cloud.sylabs.io/library">https://cloud.sylabs.io/library</a> in your browser and search from there
 through the web GUI.</p>
 <p>Alternatively, from the CLI you can use <code class="docutils literal notranslate"><span class="pre">singularity</span> <span class="pre">search</span>
 <span class="pre">&lt;query&gt;</span></code>. This will search the library for container images matching
 <code class="docutils literal notranslate"><span class="pre">&lt;query&gt;</span></code>.</p>
-<div class="section" id="using-the-cli-search">
-<h3>Using the CLI Search<a class="headerlink" href="#using-the-cli-search" title="Permalink to this headline">¶</a></h3>
+<section id="using-the-cli-search">
+<h3>Using the CLI Search<a class="headerlink" href="#using-the-cli-search" title="Permalink to this headline"></a></h3>
 <p>Here is an example of searching the library for <code class="docutils literal notranslate"><span class="pre">centos</span></code>:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">singularity search centos</span>
 <span class="go">Found 72 container images for amd64 matching &quot;centos&quot;:</span>
@@ -439,17 +342,17 @@ current system. To e.g. search for <code class="docutils literal notranslate"><s
 <span class="go">    ...</span>
 </pre></div>
 </div>
-</div>
-</div>
-<div class="section" id="remote-builder">
-<span id="id3"></span><h2>Remote Builder<a class="headerlink" href="#remote-builder" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="remote-builder">
+<span id="id3"></span><h2>Remote Builder<a class="headerlink" href="#remote-builder" title="Permalink to this headline"></a></h2>
 <p>The remote builder service can build your container in the cloud removing the requirement for root access.</p>
 <p>Here’s a typical remote build command:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ singularity build --remote file-out.sif docker://ubuntu:18.04
 </pre></div>
 </div>
-<div class="section" id="building-from-a-definition-file">
-<h3>Building from a definition file:<a class="headerlink" href="#building-from-a-definition-file" title="Permalink to this headline">¶</a></h3>
+<section id="building-from-a-definition-file">
+<h3>Building from a definition file:<a class="headerlink" href="#building-from-a-definition-file" title="Permalink to this headline"></a></h3>
 <p>This is our definition file. Let’s call it <code class="docutils literal notranslate"><span class="pre">ubuntu.def</span></code>:</p>
 <div class="highlight-singularity notranslate"><div class="highlight"><pre><span></span><span class="k">bootstrap</span>: library
 <span class="k">from</span>: ubuntu:<span class="m">18.04</span>
@@ -474,56 +377,39 @@ hello world from ubuntu container!
 <p>You can also use the web GUI to build containers remotely. First, go to <a class="reference external" href="https://cloud.sylabs.io/builder">https://cloud.sylabs.io/builder</a> (make sure you are signed in).
 Then you can copy and paste, upload, or type your definition file. When you are finished, click build. Then you can download the container
 with the URL.</p>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 
            </div>
-           
           </div>
-          <footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="bind_paths_and_mounts.html" class="btn btn-neutral float-right" title="Bind Paths and Mounts" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="endpoint.html" class="btn btn-neutral float-left" title="Remote Endpoints" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="bind_paths_and_mounts.html" class="btn btn-neutral float-right" title="Bind Paths and Mounts" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &#169; Copyright 2017-2021, HPCng.
-
-    </p>
+    <p>&#169; Copyright 2017-2021, HPCng.</p>
   </div>
-    
-    
-    
-    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    
-    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
 
 </footer>
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>
