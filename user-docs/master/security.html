@@ -1,84 +1,41 @@
-
-
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
-  
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
   <title>Security in Singularity &mdash; Singularity User Guide 3.8 documentation</title>
-  
-
-  
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
-
-  
-  
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
     <link rel="shortcut icon" href="_static/favicon.png"/>
-  
-
-  
-  
-
-  
-
-  
   <!--[if lt IE 9]>
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
         <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
         <script src="_static/doctools.js"></script>
         <script src="_static/js/ga.js"></script>
-    
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-
-    
+    <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Build a Container" href="build_a_container.html" />
     <link rel="prev" title="Quick Start" href="quick_start.html" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
-
-          
             <a href="index.html" class="icon icon-home"> Singularity User Guide
-          
-
-          
-            
             <img src="_static/logo.png" class="logo" alt="Logo"/>
-          
           </a>
-
-          
-            
-            
               <div class="version">
                 3.8
               </div>
-            
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -86,18 +43,7 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction to Singularity</a></li>
 <li class="toctree-l1"><a class="reference internal" href="quick_start.html">Quick Start</a></li>
@@ -159,75 +105,32 @@
 <li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
 </ul>
 
-            
-          
         </div>
-        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="index.html">Singularity User Guide</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content style-external-links">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-        
       <li>Security in Singularity</li>
-    
-    
       <li class="wy-breadcrumbs-aside">
-        
-          
-            
               <a href="https://github.com/hpcng/singularity-userdocs/blob/master/security.rst" class="fa fa-github"> Edit on GitHub</a>
-            
-          
-        
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
-  <div class="section" id="security-in-singularity">
-<span id="security"></span><h1>Security in Singularity<a class="headerlink" href="#security-in-singularity" title="Permalink to this headline">¶</a></h1>
+             
+  <section id="security-in-singularity">
+<span id="security"></span><h1>Security in Singularity<a class="headerlink" href="#security-in-singularity" title="Permalink to this headline"></a></h1>
 <p>Containers are popular for many good reasons. They are light weight,
 easy to spin-up and require reduced IT management resources as
 compared to hardware VM environments. More importantly, container
@@ -239,8 +142,8 @@ system. But there are still some challenges to container security.</p>
 Compute, Reproducibility, HPC support, and <strong>Security</strong>. This section
 gives an overview of security features supported by Singularity,
 especially where they differ from other container runtimes.</p>
-<div class="section" id="security-policy">
-<h2>Security Policy<a class="headerlink" href="#security-policy" title="Permalink to this headline">¶</a></h2>
+<section id="security-policy">
+<h2>Security Policy<a class="headerlink" href="#security-policy" title="Permalink to this headline"></a></h2>
 <p>Security is not a check box that one can tick and forget.  Ensuring
 security is a ongoing process that begins with software architecture,
 and continues all the way through to ongoing security practices.  In
@@ -255,9 +158,9 @@ so.</p>
 follow the steps in our published <a class="reference external" href="https://singularity.hpcng.org/security-policy/">Security Policy</a>.</p>
 <p>so that it can be disclosed, investigated, and fixed in an appropriate
 manner.</p>
-</div>
-<div class="section" id="singularity-pro-long-term-support-security-patches">
-<h2>Singularity PRO - Long Term Support &amp; Security Patches<a class="headerlink" href="#singularity-pro-long-term-support-security-patches" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="singularity-pro-long-term-support-security-patches">
+<h2>Singularity PRO - Long Term Support &amp; Security Patches<a class="headerlink" href="#singularity-pro-long-term-support-security-patches" title="Permalink to this headline"></a></h2>
 <p>Security patches for Singularity are applied to the latest open-source
 version, so it is important to follow new releases and upgrade when
 neccessary.</p>
@@ -268,9 +171,9 @@ patches are backported to select versions of Singularity PRO, so that
 they can be deployed long-term where required. PRO users receive
 security fixes (without specific notification or detail) prior to
 public disclosure, as detailed in the <a class="reference external" href="https://singularity.hpcng.org/security-policy/">Singularity Community Security Policy</a>.</p>
-</div>
-<div class="section" id="singularity-runtime-user-privilege">
-<h2>Singularity Runtime &amp; User Privilege<a class="headerlink" href="#singularity-runtime-user-privilege" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="singularity-runtime-user-privilege">
+<h2>Singularity Runtime &amp; User Privilege<a class="headerlink" href="#singularity-runtime-user-privilege" title="Permalink to this headline"></a></h2>
 <p>The Singularity Runtime enforces a unique security model that makes it
 appropriate for <em>untrusted users</em> to run <em>untrusted containers</em> safely
 on multi-tenant resources. When you run a container, the processes in
@@ -301,9 +204,9 @@ achieved by passing options causing Singularity to enter any or all of
 the other kernel namespaces and to prevent automatic bind mounting.
 These measures allow users to interact with the host system from
 within the container in sensible ways.</p>
-</div>
-<div class="section" id="singularity-image-format-sif">
-<h2>Singularity Image Format (SIF)<a class="headerlink" href="#singularity-image-format-sif" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="singularity-image-format-sif">
+<h2>Singularity Image Format (SIF)<a class="headerlink" href="#singularity-image-format-sif" title="Permalink to this headline"></a></h2>
 <p>Ensuring container security as a continuous process. Singularity
 provides ways to ensure integrity throughout the lifecyle of a
 container, i.e. at rest, in transit and while running. The SIF
@@ -332,9 +235,9 @@ layers to be extracted to a rootfs directory on the host, Singularity
 executes containers in a single step, directly from the immutable
 <code class="docutils literal notranslate"><span class="pre">.sif</span></code>. This reduces the attack surface and allows the container to
 be easily verified at runtime, to ensure it has not been tampered with.</p>
-</div>
-<div class="section" id="admin-configurable-files">
-<h2>Admin Configurable Files<a class="headerlink" href="#admin-configurable-files" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="admin-configurable-files">
+<h2>Admin Configurable Files<a class="headerlink" href="#admin-configurable-files" title="Permalink to this headline"></a></h2>
 <p>System administrators who manage Singularity can use configuration
 files, to set security restrictions, grant or revoke a user’s
 capabilities, manage resources and authorize containers etc.</p>
@@ -342,8 +245,8 @@ capabilities, manage resources and authorize containers etc.</p>
 file allows blacklisting and whitelisting of containers.</p>
 <p>Configuration files and their parameters are documented for administrators
 documented <a class="reference external" href="https://singularity.hpcng.org/admin-docs/3.8/configfiles.html">here</a>.</p>
-<div class="section" id="cgroups-support">
-<h3>cgroups support<a class="headerlink" href="#cgroups-support" title="Permalink to this headline">¶</a></h3>
+<section id="cgroups-support">
+<h3>cgroups support<a class="headerlink" href="#cgroups-support" title="Permalink to this headline"></a></h3>
 <p>Starting with v3.0, Singularity added native support for <code class="docutils literal notranslate"><span class="pre">cgroups</span></code>,
 allowing users to limit the resources their containers consume without
 the help of a separate program like a batch scheduling system. This
@@ -355,24 +258,24 @@ installed by default with Singularity as a guide. At runtime, the
 <code class="docutils literal notranslate"><span class="pre">--apply-cgroups</span></code> option is used to specify the location of the
 configuration file to apply to the container and cgroups are
 configured accordingly. More about cgroups support <a class="reference external" href="https://singularity.hpcng.org/admin-docs/3.8/configfiles.html#cgroups-toml">here</a>.</p>
-</div>
-<div class="section" id="security-options">
-<h3><code class="docutils literal notranslate"><span class="pre">--security</span></code> options<a class="headerlink" href="#security-options" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="security-options">
+<h3><code class="docutils literal notranslate"><span class="pre">--security</span></code> options<a class="headerlink" href="#security-options" title="Permalink to this headline"></a></h3>
 <p>Singularity supports a number of methods for further modifying the
 security scope and context when running Singularity containers.  Flags
 can be passed to the action commands; <code class="docutils literal notranslate"><span class="pre">shell</span></code>, <code class="docutils literal notranslate"><span class="pre">exec</span></code>, and <code class="docutils literal notranslate"><span class="pre">run</span></code>
 allowing fine grained control of security. Details about them are
 documented <a class="reference internal" href="security_options.html#security-options"><span class="std std-ref">here</span></a>.</p>
-</div>
-</div>
-<div class="section" id="security-in-the-sylabs-cloud">
-<h2>Security in the Sylabs Cloud<a class="headerlink" href="#security-in-the-sylabs-cloud" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="security-in-the-sylabs-cloud">
+<h2>Security in the Sylabs Cloud<a class="headerlink" href="#security-in-the-sylabs-cloud" title="Permalink to this headline"></a></h2>
 <p><a class="reference external" href="https://cloud.sylabs.io/home">Sylabs Cloud</a> consists of a Remote
 Builder, a Container Library, and a Keystore. Together, theses
 services provide an end-to-end solution for packaging and distributing
 applications in secure and trusted containers.</p>
-<div class="section" id="remote-builder">
-<h3>Remote Builder<a class="headerlink" href="#remote-builder" title="Permalink to this headline">¶</a></h3>
+<section id="remote-builder">
+<h3>Remote Builder<a class="headerlink" href="#remote-builder" title="Permalink to this headline"></a></h3>
 <p>As mentioned earlier, the Singularity runtime prevents executing code
 with root-level permissions on the host system. However, building a
 container requires elevated privileges that most shared environments
@@ -393,18 +296,18 @@ privileges inside a container.</p>
 <p>Fakeroot has some limitations, and requires unpriveleged user
 namespace support in the host kernel.</p>
 </div>
-</div>
-<div class="section" id="container-library">
-<h3>Container Library<a class="headerlink" href="#container-library" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="container-library">
+<h3>Container Library<a class="headerlink" href="#container-library" title="Permalink to this headline"></a></h3>
 <p>The <a class="reference external" href="https://cloud.sylabs.io/library">Container Library</a> allows
 users to store and share Singularity container images in the
 Singularity Image Format (SIF). A web front-end allows users to create
 new projects within the Container Library, edit documentation
 associated with container images, and discover container images
 published by their peers.</p>
-</div>
-<div class="section" id="key-store">
-<span id="keystore"></span><h3>Key Store<a class="headerlink" href="#key-store" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="key-store">
+<span id="keystore"></span><h3>Key Store<a class="headerlink" href="#key-store" title="Permalink to this headline"></a></h3>
 <p>The <a class="reference external" href="https://cloud.sylabs.io/keystore">Key Store</a> is a key
 management system offered by Sylabs that uses an <a class="reference external" href="https://gnupg.org/">OpenPGP
 implementation</a> to permit sharing and discovery
@@ -419,9 +322,9 @@ authenticated users to add or modify PGP keys.</p></li>
 <li><p>A web front-end allows users to view and search for PGP keys using a
 web browser.</p></li>
 </ul>
-</div>
-<div class="section" id="authentication-and-encryption">
-<h3>Authentication and encryption<a class="headerlink" href="#authentication-and-encryption" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="authentication-and-encryption">
+<h3>Authentication and encryption<a class="headerlink" href="#authentication-and-encryption" title="Permalink to this headline"></a></h3>
 <ol class="arabic simple">
 <li><p>Communication between users, the authentication service other
 services is secured via TLS encryption.</p></li>
@@ -432,56 +335,39 @@ request between the services is authenticated using the
 authentication token supplied by the user in the associated
 request.</p></li>
 </ol>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 
            </div>
-           
           </div>
-          <footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="build_a_container.html" class="btn btn-neutral float-right" title="Build a Container" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="quick_start.html" class="btn btn-neutral float-left" title="Quick Start" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="build_a_container.html" class="btn btn-neutral float-right" title="Build a Container" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &#169; Copyright 2017-2021, HPCng.
-
-    </p>
+    <p>&#169; Copyright 2017-2021, HPCng.</p>
   </div>
-    
-    
-    
-    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    
-    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
 
 </footer>
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>
